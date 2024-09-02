@@ -1,0 +1,284 @@
+@import url(./utils-variables.css);
+
+body {
+  width: 100%;
+  height: 100vh;
+  min-height: 100dvh;
+  background-color: var(--cl-primary-50);
+  color: var(--cl-dark);
+  font-family: var(--primary-ff);
+}
+
+.hero-section {
+  max-width: 75rem; /* 1200px */
+  height: inherit;
+  margin: 0 auto;
+}
+
+/* === hero header === */
+.hero-section .navbar {
+  padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+.hero-section .navbar .logo img {
+  width: 8.125rem; /* 130px */
+}
+
+.hero-section .navbar .navbar-nav {
+  gap: 2.25rem;
+}
+
+.hero-section .navbar li {
+  font-size: var(--fs-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--cl-dark-100);
+}
+
+.hero-section .navbar a {
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.hero-section .shopping-cart .shopping-cart-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  gap: calc(var(--gap-sm) / 2);
+  transition: var(--transition-fast);
+}
+
+/* === hero body === */
+.hero-section .hero-body {
+  margin: var(--spacing-lg) var(--spacing-lg);
+  display: grid;
+  gap: 7rem;
+}
+
+.hero-section .hero-description > .sub-heading {
+  border-radius: 30px;
+  padding: var(--spacing-sm) 0.875em;
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+.hero-section .hero-description > .heading {
+  font-size: clamp(3rem, 8vw, calc(var(--fs-8xl) * 2));
+  line-height: 1;
+}
+
+.hero-section .hero-description .hero-des-btn {
+  border: var(--border-width-base) solid var(--cl-primary);
+  border-radius: var(--border-radius);
+  background-color: var(--cl-primary-100);
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+  padding: var(--spacing-md);
+  color: var(--cl-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--fs-sm);
+  cursor: var(--cursor-pointer);
+  transition: var(--transition-fast);
+  text-decoration: none;
+}
+
+.hero-section .hero-description .shop-btn {
+  border: var(--border-width-base) solid var(--cl-primary);
+  border-radius: var(--border-radius);
+  background-color: var(--cl-primary);
+  color: var(--cl-light);
+}
+
+.hero-section .hero-body .hero-image img {
+  width: 30rem;
+}
+
+/* hero burger cards */
+.hero-section .hero-body .burger-cards {
+  gap: calc(var(--gap-2xl) * 2);
+}
+
+.hero-section .hero-body .card {
+  background-color: var(--cl-primary-70);
+  width: fit-content;
+  border-radius: calc(var(--border-radius) * 2);
+  font-size: var(--fs-md);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  transition: var(--transition-base);
+  position: var(--position-relative);
+}
+
+.hero-section .hero-body .card a {
+  cursor: grab;
+  display: grid;
+  place-items: center;
+  gap: var(--gap-sm);
+  width: inherit;
+  padding: var(--spacing-lg);
+}
+
+.hero-section .card .card-img img {
+  position: absolute;
+  transition: var(--transition-base);
+  top: -5.25rem;
+}
+.hero-section .first-card img {
+  left: 3.25rem;
+  width: 100px;
+}
+.hero-section .second-card img {
+  left: 3rem;
+  width: 120px;
+}
+.hero-section .third-card img {
+  left: 2.5rem;
+  width: 120px;
+}
+.hero-section .forth-card img {
+  left: 2.25rem;
+  width: 130px;
+}
+
+.hero-section .hero-body .card .card-title {
+  color: var(--cl-neutral-600);
+  line-height: var(--line-height-tight);
+}
+
+.hero-section .hero-body .card .card-info {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
+  color: var(--cl-neutral-600);
+}
+
+.hero-section .hero-body .card .reviews i {
+  color: var(--cl-warning);
+}
+
+.hero-section .hero-body .card .price {
+  color: var(--cl-primary);
+}
+
+/* ========= main section ========= */
+/* === menu section === */
+.main-container {
+  max-width: 75rem; /* 1200px */
+  height: 100vh;
+  margin: calc(var(--spacing-3xl) * 2) auto;
+}
+
+.main-container .menu .section-heading {
+  gap: calc(var(--gap-sm) / 2);
+}
+
+.main-container .menu .card .card-img::after {
+  content: "";
+  width: calc(100% - 20%);
+  height: 2rem;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.447);
+  filter: blur(12px);
+  position: absolute;
+  z-index: -1;
+}
+
+.main-container .menu .first-card .card-img::after {
+  bottom: 0.875rem;
+  left: 1.25rem;
+}
+.main-container .menu .second-card .card-img::after {
+  bottom: -0.25rem;
+  left: 1.25rem;
+}
+.main-container .menu .third-card .card-img::after {
+  bottom: 0.5rem;
+  left: 1rem;
+}
+.main-container .menu .fourth-card .card-img::after {
+  bottom: 1.5rem;
+  left: 1.5rem;
+}
+.main-container .menu .fifth-card .card-img::after {
+  bottom: 1.25rem;
+  left: 1.25rem;
+}
+
+.main-container .menu .card img {
+  width: 16rem;
+  aspect-ratio: 2 / 2;
+  object-fit: contain;
+  transition: var(--transition-base);
+}
+
+.main-container .menu .description {
+  width: 25ch; /* Adjust width as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: balance;
+  text-align: center;
+}
+
+.main-container .menu .card .reviews i {
+  color: var(--cl-warning);
+}
+
+.main-container .menu .card .cart a {
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+/* slider-controls */
+.main-container .menu .button-next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: var(--z-index-99);
+  font-size: var(--fs-3xl);
+  color: var(--cl-neutral-400);
+  cursor: var(--cursor-pointer);
+}
+
+.main-container .menu .button-prev {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: var(--z-index-99);
+  font-size: var(--fs-3xl);
+  color: var(--cl-neutral-400);
+  cursor: var(--cursor-pointer);
+}
+
+/* hovering styles */
+.hero-section .navbar a:hover {
+  color: var(--cl-dark);
+}
+
+.hero-section .shopping-cart .shopping-cart-btn:hover {
+  background-color: var(--cl-primary);
+  color: var(--cl-light);
+  border-color: var(--cl-primary-200);
+}
+
+.hero-section .hero-description .hero-des-btn:hover {
+  background-color: var(--cl-primary);
+  color: var(--cl-light);
+}
+
+.hero-section .card:hover {
+  background-color: var(--cl-primary-400);
+}
+
+.hero-section .card:hover .card-title,
+.hero-section .card:hover .reviews,
+.hero-section .card:hover .price {
+  color: var(--cl-light);
+}
+
+.hero-section .card:hover img {
+  transform: scale(1.1) rotate(15deg);
+}
+
+.main-container .menu .addtocart-btn:hover {
+  background-color: var(--cl-primary);
+  color: var(--cl-light);
+}
