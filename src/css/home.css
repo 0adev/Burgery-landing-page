@@ -1,18 +1,11 @@
 @import url(./utils-variables.css);
 
-body {
-  width: 100%;
-  height: 100vh;
-  min-height: 100dvh;
-  background-color: var(--cl-primary-50);
-  color: var(--cl-dark);
-  font-family: var(--primary-ff);
-}
-
 .hero-section {
   max-width: 75rem; /* 1200px */
   height: inherit;
   margin: 0 auto;
+  padding-inline: var(--spacing-lg);
+  overflow: hidden;
 }
 
 /* === hero header === */
@@ -47,7 +40,7 @@ body {
 
 /* === hero body === */
 .hero-section .hero-body {
-  margin: var(--spacing-lg) var(--spacing-lg);
+  margin: var(--spacing-lg) 0;
   display: grid;
   gap: 7rem;
 }
@@ -57,11 +50,6 @@ body {
   padding: var(--spacing-sm) 0.875em;
   width: fit-content;
   text-transform: uppercase;
-}
-
-.hero-section .hero-description > .heading {
-  font-size: clamp(3rem, 8vw, calc(var(--fs-8xl) * 2));
-  line-height: 1;
 }
 
 .hero-section .hero-description .hero-des-btn {
@@ -163,8 +151,8 @@ body {
 /* === menu section === */
 .main-container {
   max-width: 75rem; /* 1200px */
-  height: 100vh;
   margin: calc(var(--spacing-3xl) * 2) auto;
+  padding-inline: var(--spacing-lg);
 }
 
 .main-container .menu .section-heading {
@@ -248,6 +236,202 @@ body {
   cursor: var(--cursor-pointer);
 }
 
+/* === features section === */
+.main-container .features-section {
+  margin-block: 10rem;
+}
+
+.main-container .features-section .features-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-md);
+}
+
+.main-container .features-section .features {
+  display: grid;
+  gap: var(--gap-md);
+  width: 100%;
+}
+
+.main-container .features-container .image > img {
+  width: 70rem;
+  filter: contrast(1.1);
+}
+.main-container .features-container .image-wrapper {
+  position: absolute;
+  inset: 0;
+  /* animation: scale 1000ms infinite alternate; */
+}
+.main-container .features-container .image-wrapper img {
+  width: 14rem;
+  position: absolute;
+}
+.main-container .features-container .image-wrapper .delicious {
+  bottom: -1rem;
+  left: -4rem;
+}
+.main-container .features-container .image-wrapper .fresh {
+  top: -2rem;
+}
+.main-container .features-container .image-wrapper .tasty {
+  top: 6rem;
+  right: -6rem;
+}
+
+/* === testimonials section === */
+.main-container .testimonials-section {
+  padding-block-end: 10rem;
+}
+
+.main-container .testimonials-section .testimonials-container {
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+  margin-top: var(--spacing-3xl);
+  cursor: grab;
+}
+
+.main-container .testimonials-section .testimonial {
+  display: grid;
+  place-items: start center;
+  gap: var(--gap-md);
+  border: 1px solid var(--border-cl-primary);
+  padding: var(--spacing-lg);
+  height: 30rem;
+}
+
+.main-container .testimonial img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border: 1px solid var(--cl-neutral);
+  border-radius: 50%;
+}
+
+.main-container .testimonial .rating {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--gap-sm) / 2);
+  color: var(--cl-dark);
+}
+
+.main-container .testimonial .description {
+  display: grid;
+  place-items: center;
+  gap: var(--gap-md);
+  text-align: center;
+}
+
+.main-container .testimonial .testimonial-title {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--fs-lg);
+  color: var(--cl-dark);
+}
+
+.main-container .testimonial .description p {
+  font-weight: var(--font-weight-normal);
+  font-size: var(--fs-md);
+  color: var(--cl-dark);
+  font-style: italic;
+}
+
+.main-container .testimonial .client-name {
+  font-size: var(--fs-md);
+  font-weight: var(--font-weight-normal);
+}
+
+/* === Blog section === */
+
+.main-container .blog-section .blog img {
+  width: 100%;
+  aspect-ratio: 1.5 / 1;
+  object-fit: cover;
+}
+
+.main-container .blog-section .blog i {
+  transform: rotate(45deg);
+}
+
+/* ========= footer section ========= */
+footer {
+  margin-top: calc(var(--spacing-3xl) * 3);
+  color: var(--cl-dark);
+  background-image: url(/src/assets/images/footer-img.png);
+  background-position: 600px;
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-color: rgb(238, 225, 190);
+  border-top: var(--border-width-sm) solid var(--cl-dark);
+}
+
+.footer-container {
+  background-color: #ffffff00;
+  backdrop-filter: blur(40px);
+  padding: var(--spacing-xl) var(--spacing-2xl);
+}
+
+.footer-container .footer-wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "service-info pages utility-pages subscription";
+  gap: var(--gap-xl);
+}
+
+.footer-container .service-info {
+  grid-area: service-info;
+}
+.footer-container .pages {
+  grid-area: pages;
+}
+.footer-container .utility-pages {
+  grid-area: utility-pages;
+}
+.footer-container .subscription {
+  grid-area: subscription;
+}
+
+.footer-container .pages,
+.footer-container .utility-pages,
+.footer-container .subscription {
+  margin-top: var(--spacing-xl);
+  display: grid;
+  place-content: start;
+  gap: var(--gap-md);
+}
+
+.footer-container .social-links a {
+  width: 2rem;
+  height: 2rem;
+  padding: var(--spacing-xs);
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: var(--cl-light);
+  transition: var(--transition-fast);
+}
+
+.footer-container form #email-input {
+  border: none;
+  padding: var(--spacing-md) 0.875rem;
+  color: var(--cl-neutral-600);
+}
+.footer-container form button {
+  border: none;
+  padding: var(--spacing-md) 0.875rem;
+  color: var(--cl-light);
+  background-color: var(--cl-primary);
+  font-size: var(--fs-md);
+  font-weight: var(--font-weight-semibold);
+  cursor: var(--cursor-pointer);
+  transition: var(--transition-fast);
+}
+
 /* hovering styles */
 .hero-section .navbar a:hover {
   color: var(--cl-dark);
@@ -281,4 +465,26 @@ body {
 .main-container .menu .addtocart-btn:hover {
   background-color: var(--cl-primary);
   color: var(--cl-light);
+}
+
+.main-container .blog-section .description a:hover {
+  text-decoration: underline;
+  color: var(--cl-primary);
+}
+
+.footer-container .social-links a:hover,
+.footer-container form button:hover {
+  background-color: var(--cl-neutral);
+}
+
+.footer-container .pages a:hover,
+.footer-container .utility-pages a:hover {
+  text-decoration: underline;
+}
+
+/* animation */
+@keyframes scale {
+  to {
+    transform: scale(1.05);
+  }
 }

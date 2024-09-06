@@ -53,6 +53,8 @@
   --fs-7xl: 3.25rem;
   --fs-8xl: 3.5rem;
   --fs-9xl: 3.875rem;
+  --fs-primary-heading: clamp(3rem, 8vw, calc(var(--fs-8xl) * 2));
+  --fs-secondary-heading: clamp(3rem, 8vw, calc(var(--fs-8xl)));
 
   /* Font Weights */
   --font-weight-light: 300;
@@ -78,7 +80,8 @@
   /* Borders */
   --border-width-sm: 1px;
   --border-width-base: 2px;
-  --border-cl: #dee2e6;
+  --border-cl-primary: var(--cl-dark);
+  --border-cl-secondary: #dee2e6;
   --border-radius: 0.5rem;
   --border-radius-circle: 50%;
 
@@ -151,6 +154,9 @@
 .text-secondary {
   color: var(--text-secondary);
 }
+.text-secondary-400 {
+  color: var(--cl-primary-400);
+}
 .text-light {
   color: var(--cl-light);
 }
@@ -202,6 +208,14 @@
 .fs-9xl {
   font-size: var(--fs-9xl);
 }
+.fs-primary-heading {
+  font-size: var(--fs-primary-heading);
+  line-height: 1;
+}
+.fs-secondary-heading {
+  font-size: var(--fs-secondary-heading);
+  line-height: 1;
+}
 
 /* Font Weights */
 .fw-light {
@@ -229,6 +243,9 @@
 }
 .lh-loose {
   line-height: var(--line-height-loose);
+}
+.line-height-1 {
+  line-height: 1;
 }
 
 /* Font Families */
@@ -366,6 +383,12 @@
 .mt-xl {
   margin-top: var(--spacing-xl);
 }
+.mt-2xl {
+  margin-top: var(--spacing-2xl);
+}
+.mt-3xl {
+  margin-top: var(--spacing-3xl);
+}
 
 .mr-xs {
   margin-right: var(--spacing-xs);
@@ -477,6 +500,12 @@
 .place-content-center {
   place-content: center;
 }
+.place-self-start {
+  place-self: start;
+}
+.place-self-end {
+  place-self: end;
+}
 
 .grid-cols-auto-fit {
   grid-template-columns: var(--grid-cols-auto-fit);
@@ -561,6 +590,15 @@
 /* text */
 .text-deco-none {
   text-decoration: none;
+}
+.text-center {
+  text-align: center;
+}
+.text-wrap {
+  text-wrap: wrap;
+}
+.text-balance {
+  text-wrap: balance;
 }
 
 /* transition */

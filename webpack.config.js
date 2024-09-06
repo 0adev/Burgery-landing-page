@@ -23,6 +23,12 @@ module.exports = {
     hot: true,
     compress: true,
     historyApiFallback: true,
+    devMiddleware: {
+      writeToDisk: true, // Ensure assets are written to disk in development
+    },
+    client: {
+      overlay: false, // Disable the error overlay, which can sometimes cause issues
+    },
   },
   module: {
     rules: [
@@ -71,6 +77,16 @@ module.exports = {
       title: "Burger template",
       filename: "index.html",
       template: "./src/index.html",
+      inject: "body",
+      scriptLoading: "defer",
+      minify: true,
+      links: [
+        {
+          rel: "preload",
+          href: "/styles/main.css",
+          as: "style",
+        },
+      ],
     }),
     new MiniCssExtractPlugin({
       filename: "styles/[name].css",
@@ -87,7 +103,15 @@ module.exports = {
       },
     }),
     // Generate HTML files for each page
-    ...["about", "contact", "menu", "blogs"].map(
+    ...[
+      "about",
+      "contact",
+      "menu",
+      "blogs",
+      "not-found",
+      "privacy-policy",
+      "style-guide",
+    ].map(
       (name) =>
         new HtmlWebpackPlugin({
           filename: `pages/${name}.html`,

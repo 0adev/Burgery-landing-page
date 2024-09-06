@@ -34,9 +34,13 @@ ol[role="list"] {
 }
 
 body {
+  width: 100%;
   min-height: 100vh;
   line-height: 1.5;
   filter: contrast(1.05);
+  background-color: var(--cl-primary-50);
+  color: var(--cl-dark);
+  font-family: var(--primary-ff);
 }
 
 h1,

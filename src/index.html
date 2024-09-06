@@ -10,7 +10,7 @@
     />
     <link
       rel="shortcut icon"
-      href="./assets/hero-imgs/favicon.svg"
+      href="./assets/images/favicon.svg"
       type="image/x-icon"
     />
     <!-- google fonts -->
@@ -28,14 +28,15 @@
     />
   </head>
   <body>
-    <!-- hero section -->
+    <!-- hero -->
     <div class="hero-section">
-      <header class="hero-header">
+      <header class="hero-header" data-aos="fade-down">
         <nav class="navbar | d-flex justify-content-between align-items-center">
           <div class="logo">
             <a href="./index.html">
               <img
-                src="./assets/hero-imgs/logo.svg"
+                loading="lazy"
+                src="./assets/images/logo.svg"
                 alt="logo svg that contains a burger logo with brand name of BURGERY"
               />
             </a>
@@ -70,31 +71,34 @@
         <div
           class="hero-contents d-flex justify-content-between align-items-center"
         >
-          <div class="hero-description d-grid gap-base">
+          <div class="hero-description d-grid gap-base" data-aos="fade-left">
             <h3
               class="sub-heading fs-sm fw-medium text-secondary bg-primary-100"
             >
               The Original Burger
             </h3>
-            <h1 class="heading ff-secondary heading-color">
+            <h1
+              class="heading ff-secondary fs-primary-heading fw-bold heading-color"
+            >
               Fresh & <br />
               Delicious
             </h1>
             <div class="hero-buttons d-flex align-items-center gap-md">
               <a href="./pages/contact.html" class="hero-des-btn shop-btn">
                 Contact us
-                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-envelope"></i>
               </a>
               <a href="./pages/menu.html" class="hero-des-btn menu-btn">
                 View Menu
-                <i class="fa-solid fa-arrow-right-long"></i>
+                <i class="fa-solid fa-eye"></i>
               </a>
             </div>
           </div>
 
-          <div class="hero-image">
+          <div class="hero-image" data-aos="fade-right">
             <img
-              src="./assets/hero-imgs/burgerImg-hero-1.png"
+              loading="lazy"
+              src="./assets/images/burgerImg-hero-1.png"
               alt="burger image"
             />
           </div>
@@ -102,12 +106,14 @@
 
         <div
           class="burger-cards d-flex justify-content-start align-items-center"
+          data-aos="fade-up"
         >
           <div class="first-card card">
             <a href="#">
               <div class="card-img">
                 <img
-                  src="./assets/hero-imgs/burgerImg-hero-2.png"
+                  loading="lazy"
+                  src="./assets/images/burgerImg-hero-2.png"
                   alt="burger image"
                   width="100"
                 />
@@ -124,7 +130,8 @@
             <a href="#">
               <div class="card-img">
                 <img
-                  src="./assets/hero-imgs/burgerImg-hero-3.png"
+                  loading="lazy"
+                  src="./assets/images/burgerImg-hero-3.png"
                   alt="burger image"
                   width="120"
                 />
@@ -141,7 +148,8 @@
             <a href="#">
               <div class="card-img">
                 <img
-                  src="./assets/hero-imgs/burgerImg-hero-4.png"
+                  loading="lazy"
+                  src="./assets/images/burgerImg-hero-4.png"
                   alt="burger image"
                   width="120"
                 />
@@ -158,7 +166,8 @@
             <a href="#">
               <div class="card-img">
                 <img
-                  src="./assets/hero-imgs/burgerImg-hero-5.png"
+                  loading="lazy"
+                  src="./assets/images/burgerImg-hero-5.png"
                   alt="burger image"
                   width="130"
                 />
@@ -173,19 +182,37 @@
         </div>
       </div>
     </div>
-    <!-- main section (features, menu, about us, testimonials, News&Blogs) -->
+    <!-- main (menu, features, testimonials, News&Blogs) -->
     <main>
       <div class="main-container">
-        <div class="menu d-grid place-items-center gap-lg relative">
-          <div class="section-heading ff-primary d-grid place-items-center">
+        <!-- menu section -->
+        <div
+          class="menu d-grid place-items-center gap-lg relative"
+          data-aos="fade-up"
+        >
+          <div
+            class="section-heading ff-primary d-grid gap-sm place-items-center text-center"
+          >
             <h2 class="heading fs-2xl fw-bold text-secondary">Menu</h2>
-            <h3 class="sub-heading fs-8xl fw-bold ff-secondary heading-color">
+            <h3
+              class="sub-heading fs-secondary-heading fw-bold ff-secondary heading-color"
+            >
               Discover Our Creations
             </h3>
           </div>
 
           <!-- menu slider -->
-          <div class="swiper w-100 cursor-grab mask-image">
+          <div class="viewAll-button place-self-end" data-aos="fade-left">
+            <a
+              href="./pages/menu.html"
+              class="d-flex align-items-center gap-sm fs-md fw-semibold text-deco-none text-primary"
+            >
+              View all
+              <i class="fa-solid fa-caret-right bg-primary-100 p-xs"></i>
+            </a>
+          </div>
+
+          <div class="swiper w-100 cursor-grab mask-image" data-aos="zoom-in">
             <div class="swiper-wrapper">
               <!-- first-card -->
               <div
@@ -196,7 +223,8 @@
                 >
                   <a href="#">
                     <img
-                      src="./assets/hero-imgs/burgerImg-hero-3.png"
+                      loading="lazy"
+                      src="./assets/images/burgerImg-hero-3.png"
                       alt="burger image"
                       width="100"
                     />
@@ -243,7 +271,8 @@
                 >
                   <a href="#">
                     <img
-                      src="./assets/hero-imgs/burgerImg-hero-2.png"
+                      loading="lazy"
+                      src="./assets/images/burgerImg-hero-2.png"
                       alt="burger image"
                       width="100"
                     />
@@ -290,7 +319,8 @@
                 >
                   <a href="#">
                     <img
-                      src="./assets/hero-imgs/burgerImg-hero-6.png"
+                      loading="lazy"
+                      src="./assets/images/burgerImg-hero-6.png"
                       alt="burger image"
                       width="100"
                     />
@@ -337,7 +367,8 @@
                 >
                   <a href="#">
                     <img
-                      src="./assets/hero-imgs/burgerImg-hero-4.png"
+                      loading="lazy"
+                      src="./assets/images/burgerImg-hero-4.png"
                       alt="burger image"
                       width="100"
                     />
@@ -384,7 +415,8 @@
                 >
                   <a href="#">
                     <img
-                      src="./assets/hero-imgs/burgerImg-hero-5.png"
+                      loading="lazy"
+                      src="./assets/images/burgerImg-hero-5.png"
                       alt="burger image"
                       width="100"
                     />
@@ -432,17 +464,511 @@
             <i class="fa-solid fa-arrow-right"></i>
           </div>
         </div>
+        <!-- features section -->
+        <div class="features-section">
+          <!-- features container -->
+          <div class="features-container">
+            <div class="features" data-aos="fade-right">
+              <div class="features-heading">
+                <h2
+                  class="heading ff-secondary fw-semibold fs-3xl text-secondary"
+                >
+                  Why Choose Us
+                </h2>
+                <h3
+                  class="sub-heading fs-6xl fw-bold ff-primary heading-color text-wrap w-100"
+                >
+                  We Make The Best Burgers In Our Restaurant
+                </h3>
+              </div>
+              <p class="description fs-lg fw-semibold heading-color fs-lg">
+                Assertively envisioneer high-payoff architectures after
+                interactive service. Collaboratively whiteboard pandemic
+                intellectual capital without cross-platform channels.
+              </p>
+              <div class="feature-one d-flex align-items-center gap-sm">
+                <div class="feature-img bg-primary-100 border-radius-circle">
+                  <img
+                    loading="lazy"
+                    src="./assets/images/stars-star-svgrepo-com.svg"
+                    alt=""
+                    width="70"
+                  />
+                </div>
+                <div class="feature-desc d-grid gap-xs">
+                  <h4>Fresh Ingredients</h4>
+                  <p class="text-balance text-primary fs-md fw-medium lh-tight">
+                    Distinctively unleash client-base portals after cross
+                    platform information.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-one d-flex align-items-center gap-sm">
+                <div
+                  class="feature-img bg-primary-100 border-radius-circle p-sm"
+                >
+                  <img
+                    loading="lazy"
+                    src="./assets/images/fast-time.png"
+                    alt=""
+                    width="50"
+                  />
+                </div>
+                <div class="feature-desc d-grid gap-xs">
+                  <h4>Quick & Convenient Service</h4>
+                  <p class="text-balance text-primary fs-md fw-medium lh-tight">
+                    Distinctively unleash client-base portals after cross
+                    platform information.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-        <!-- <div class="features">
-          <div class="section-heading">
-            <h2 class="heading">features</h2>
-            <h3 class="sub-heading">Our Awesome Services</h3>
+            <div class="image relative" data-aos="fade-left">
+              <div class="image-wrapper">
+                <img
+                  loading="lazy"
+                  src="./assets/images/1-removebg-preview.png"
+                  class="delicious"
+                  alt=""
+                  data-aos="zoom-in"
+                />
+                <img
+                  loading="lazy"
+                  src="./assets/images/2-removebg-preview.png"
+                  class="fresh"
+                  alt=""
+                  data-aos="zoom-in"
+                />
+                <img
+                  loading="lazy"
+                  src="./assets/images/3-removebg-preview.png"
+                  class="tasty"
+                  alt=""
+                  data-aos="zoom-in"
+                />
+              </div>
+              <img
+                loading="lazy"
+                src="./assets/images/burger-with-flying-elements-removebg-preview.png"
+                alt=""
+              />
+            </div>
           </div>
-          <div class="feature-one feature"></div>
-          <div class="feature-two feature"></div>
-          <div class="feature-tree feature"></div>
-        </div> -->
+        </div>
+        <!-- Testimonials section -->
+        <div class="testimonials-section" data-aos="fade-up">
+          <!-- section heading -->
+          <div
+            class="section-heading ff-primary d-grid gap-sm place-items-center text-center"
+          >
+            <h2 class="heading fs-2xl fw-bold text-secondary">Testimonials</h2>
+            <h3
+              class="sub-heading fs-secondary-heading fw-bold ff-secondary heading-color"
+            >
+              Don’t just take our <br />
+              word for it...
+            </h3>
+          </div>
+          <!-- testimonials container -->
+          <div class="swiper testimonials-container">
+            <div class="swiper-wrapper">
+              <!-- 1 -->
+              <div class="swiper-slide testimonial testimonial1">
+                <div class="image">
+                  <img
+                    loading="lazy"
+                    src="./assets/images/testimonial-img-3.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="description">
+                  <h4 class="testimonial-title">Best burgers in town!</h4>
+                  <p>
+                    "I've tried many burger joints, but this place takes the
+                    crown. The patties are juicy, the toppings are fresh, and
+                    the buns are perfectly toasted. I can't get enough of their
+                    signature burger. Highly recommend!"
+                  </p>
+                </div>
+                <div class="client-name">- Sarah Thompson</div>
+              </div>
+              <!-- 2 -->
+              <div class="swiper-slide testimonial testimonial2">
+                <div class="image">
+                  <img
+                    loading="lazy"
+                    src="./assets/images/testimonial-img-4.jpg"
+                    alt=""
+                    width="100"
+                  />
+                </div>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="description">
+                  <h4 class="testimonial-title">
+                    Fast service and delicious food!
+                  </h4>
+                  <p>
+                    "I love how quickly my order is ready, even during busy
+                    times. The burgers are always hot and flavorful, and their
+                    fries are crispy perfection. This has become my go-to spot
+                    for a quick and satisfying meal."
+                  </p>
+                </div>
+                <div class="user-name">- Michael Rodriguez</div>
+              </div>
+              <!-- 3 -->
+              <div class="swiper-slide testimonial testimonial3">
+                <div class="image">
+                  <img
+                    loading="lazy"
+                    src="./assets/images/testimonial-img-5.jpg"
+                    alt=""
+                    width="100"
+                  />
+                </div>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="description">
+                  <h4 class="testimonial-title">Unbeatable flavors!</h4>
+                  <p>
+                    "The burgers here are on another level. The combination of
+                    flavors in each bite is simply amazing. Whether I'm craving
+                    something classic or adventurous, they always deliver. You
+                    won't be disappointed!"
+                  </p>
+                </div>
+                <div class="user-name">- Emily Carter</div>
+              </div>
+              <!-- 4 -->
+              <div class="swiper-slide testimonial testimonial4">
+                <div class="image">
+                  <img
+                    loading="lazy"
+                    src="./assets/images/testimonial-img-2.jpg"
+                    alt=""
+                    width="100"
+                  />
+                </div>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="description">
+                  <h4 class="testimonial-title">Great value for money!</h4>
+                  <p>
+                    "Not only are the burgers delicious, but they also offer
+                    incredible value. The portions are generous, and the prices
+                    are fair. I always leave full and happy without breaking the
+                    bank. A must-try!"
+                  </p>
+                </div>
+                <div class="user-name">- David Mitchell</div>
+              </div>
+              <!-- 5 -->
+              <div class="swiper-slide testimonial testimonial5">
+                <div class="image">
+                  <img
+                    loading="lazy"
+                    src="./assets/images/testimonial-img-1.jpg"
+                    alt=""
+                    width="100"
+                  />
+                </div>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="description">
+                  <h4 class="testimonial-title">
+                    Perfect for the whole family!
+                  </h4>
+                  <p>
+                    "We brought the whole family here, and everyone found
+                    something they loved. The kids enjoyed the cheeseburgers,
+                    while I went for the spicy option. The atmosphere is
+                    welcoming, and the food is top-notch. We'll be back for
+                    sure!"
+                  </p>
+                </div>
+                <div class="user-name">- Jessica Williams</div>
+              </div>
+              <!-- 6 -->
+              <div class="swiper-slide testimonial testimonial6">
+                <div class="image">
+                  <img
+                    loading="lazy"
+                    src="./assets/images/testimonial-img-6.jpg"
+                    alt=""
+                    width="100"
+                  />
+                </div>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="description">
+                  <h4 class="testimonial-title">
+                    Exceptional customer service!
+                  </h4>
+                  <p>
+                    "Beyond the mouthwatering burgers, the customer service is
+                    what keeps me coming back. The staff is always friendly and
+                    attentive, making sure every order is perfect. It's rare to
+                    find a place that gets both food and service right!"
+                  </p>
+                </div>
+                <div class="user-name">- Christopher Lee</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- blog section -->
+        <div class="blog-section" data-aos="fade-up">
+          <!-- section heading -->
+          <div
+            class="section-heading ff-primary d-grid gap-sm place-items-center text-center"
+          >
+            <h2 class="heading fs-2xl fw-bold text-secondary">News & Blog</h2>
+            <h3
+              class="sub-heading fs-secondary-heading fw-bold ff-secondary heading-color"
+            >
+              Burgery Weekly Updates
+            </h3>
+          </div>
+          <!-- blog container -->
+          <div class="blogs-container d-grid grid-cols-auto-fit gap-xl mt-3xl">
+            <!-- blog 1 -->
+            <article class="blog first-blog d-grid gap-md">
+              <div class="image o-hidden">
+                <img
+                  loading="lazy"
+                  src="./assets/images/blog-image-1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="description d-grid gap-sm">
+                <h4 class="title text-primary fs-lg fw-semibold">
+                  Secrets to the Perfect Burger
+                </h4>
+                <p class="text-primary fw-medium fs-md">
+                  This blog will explore the art of crafting the perfect burger.
+                  It can include insider tips from the restaurant's chef...
+                </p>
+                <a
+                  href="./pages/blogs.html"
+                  class="text-primary fw-medium fs-md text-deco-none transition-fast w-fit-content"
+                >
+                  Read more <i class="fa-solid fa-arrow-up"></i>
+                </a>
+              </div>
+            </article>
+            <!-- blog 2 -->
+            <article class="blog first-blog d-grid gap-md">
+              <div class="image o-hidden">
+                <img
+                  loading="lazy"
+                  src="./assets/images/blog-image-2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="description d-grid gap-sm">
+                <h4 class="title text-primary fs-lg fw-semibold">
+                  Exploring Our Sides and Shakes
+                </h4>
+                <p class="text-primary fw-medium fs-md">
+                  Highlight the full experience of dining at the restaurant by
+                  focusing on the often-overlooked sides and shakes...
+                </p>
+                <a
+                  href="./pages/blogs.html"
+                  class="text-primary fw-medium fs-md text-deco-none transition-fast w-fit-content"
+                >
+                  Read more <i class="fa-solid fa-arrow-up"></i>
+                </a>
+              </div>
+            </article>
+            <!-- blog 3 -->
+            <article class="blog first-blog d-grid gap-md">
+              <div class="image o-hidden">
+                <img
+                  loading="lazy"
+                  src="./assets/images/blog-image-3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="description d-grid gap-sm">
+                <h4 class="title text-primary fs-lg fw-semibold">
+                  A Brief History of the Burger
+                </h4>
+                <p class="text-primary fw-medium fs-md">
+                  Dive into the rich history of the burger, tracing its
+                  evolution from a simple sandwich to a gourmet delight...
+                </p>
+                <a
+                  href="./pages/blogs.html"
+                  class="text-primary fw-medium fs-md text-deco-none transition-fast w-fit-content"
+                >
+                  Read more <i class="fa-solid fa-arrow-up"></i>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
     </main>
+    <!-- footer -->
+    <footer>
+      <div class="footer-container w-100 d-grid place-items-center gap-xl">
+        <div class="footer-wrapper">
+          <!-- service info -->
+          <div class="service-info w-fit-content">
+            <div class="logo w-fit-content">
+              <a href="./index.html">
+                <img loading="lazy" src="./assets/images/logo.svg" alt="logo" />
+              </a>
+            </div>
+            <div class="info d-grid gap-lg">
+              <div class="description fs-md fw-medium text-balance">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                  eveniet animi, voluptas maxime ut cupiditate aspernatur eos
+                  nam praesentium dolorum.
+                </p>
+              </div>
+              <div class="social-links d-flex align-items-center gap-sm">
+                <a href="#" class="fs-md bg-primary border-radius-circle"
+                  ><i class="fa-brands fa-whatsapp"></i
+                ></a>
+                <a href="#" class="fs-md bg-primary border-radius-circle"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a href="#" class="fs-md bg-primary border-radius-circle"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- pages -->
+          <div class="pages">
+            <h3 class="ff-secondary fw-bold fs-lg">Pages</h3>
+            <div class="footer-links">
+              <ul role="list">
+                <li>
+                  <a
+                    href="./index.html"
+                    class="fw-medium fs-md text-primary text-deco-none transition-fast"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./pages/menu.html"
+                    class="fw-medium fs-md text-primary text-deco-none transition-fast"
+                    >Menu</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./pages/blogs.html"
+                    class="fw-medium fs-md text-primary text-deco-none transition-fast"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./pages/about.html"
+                    class="fw-medium fs-md text-primary text-deco-none transition-fast"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./pages/contact.html"
+                    class="fw-medium fs-md text-primary text-deco-none transition-fast"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- utility pages -->
+          <div class="utility-pages">
+            <h3 class="ff-secondary fs-lg fw-bold">Utility pages</h3>
+            <div class="footer-links">
+              <ul role="list">
+                <li>
+                  <a
+                    href="./pages/style-guide.html"
+                    class="fw-medium fs-md text-primary text-deco-none transition-fast"
+                    >Style Guide</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./pages/not-found.html"
+                    class="fw-medium fs-md text-primary text-deco-none transition-fast"
+                    >Not Found</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./pages/privacy-policy.html"
+                    class="fw-medium fs-md text-primary text-deco-none transition-fast"
+                    >Privacy Policy</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- subscription form -->
+          <div class="subscription">
+            <h3 class="ff-secondary fs-2xl fw-bold">
+              Subscribe to Our Newsletter
+            </h3>
+            <form class="d-grid gap-sm w-100">
+              <input
+                type="email"
+                name="email"
+                id="email-input"
+                placeholder="user@gmail.com"
+              />
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <!-- copyright -->
+        <div class="copyright fw-normal text-primary fs-sm text-center">
+          ©2024 Burgery Template. Design by 0adev
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
