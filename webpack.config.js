@@ -23,12 +23,6 @@ module.exports = {
     hot: true,
     compress: true,
     historyApiFallback: true,
-    devMiddleware: {
-      writeToDisk: true, // Ensure assets are written to disk in development
-    },
-    client: {
-      overlay: false, // Disable the error overlay, which can sometimes cause issues
-    },
   },
   module: {
     rules: [

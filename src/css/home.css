@@ -1,41 +1,72 @@
 @import url(./utils-variables.css);
 
+/* === header === */
+
+.header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.071);
+  backdrop-filter: blur(50px);
+  z-index: 999;
+}
+
+.header .navbar {
+  max-width: 75rem; /* 1200px */
+  margin: 0 auto;
+  padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+.header .navbar .logo img {
+  width: 8.125rem; /* 130px */
+}
+
+.header .navbar .navbar-nav {
+  gap: 2.25rem;
+}
+
+.header .navbar li {
+  font-size: var(--fs-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--cl-dark);
+  position: relative;
+}
+.header .navbar li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.15rem;
+  width: 100%;
+  height: 3px;
+  background-color: var(--cl-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--transition-base);
+}
+
+.header .hamburger-menu {
+  cursor: pointer;
+  font-size: var(--fs-lg);
+  display: none;
+  color: var(--cl-dark);
+}
+
+.header .navbar a {
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.header .shopping-cart .shopping-cart-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  gap: calc(var(--gap-sm) / 2);
+  transition: var(--transition-fast);
+}
+
+/* === hero section === */
 .hero-section {
   max-width: 75rem; /* 1200px */
   height: inherit;
   margin: 0 auto;
   padding-inline: var(--spacing-lg);
-  overflow: hidden;
-}
-
-/* === hero header === */
-.hero-section .navbar {
-  padding: var(--spacing-sm) var(--spacing-lg);
-}
-
-.hero-section .navbar .logo img {
-  width: 8.125rem; /* 130px */
-}
-
-.hero-section .navbar .navbar-nav {
-  gap: 2.25rem;
-}
-
-.hero-section .navbar li {
-  font-size: var(--fs-sm);
-  font-weight: var(--font-weight-semibold);
-  color: var(--cl-dark-100);
-}
-
-.hero-section .navbar a {
-  text-decoration: none;
-  transition: var(--transition-fast);
-}
-
-.hero-section .shopping-cart .shopping-cart-btn {
-  padding: var(--spacing-sm) var(--spacing-md);
-  gap: calc(var(--gap-sm) / 2);
-  transition: var(--transition-fast);
 }
 
 /* === hero body === */
@@ -43,6 +74,10 @@
   margin: var(--spacing-lg) 0;
   display: grid;
   gap: 7rem;
+}
+
+.hero-section .hero-description > .heading {
+  width: 10ch;
 }
 
 .hero-section .hero-description > .sub-heading {
@@ -150,7 +185,7 @@
 /* ========= main section ========= */
 /* === menu section === */
 .main-container {
-  max-width: 75rem; /* 1200px */
+  width: 75rem; /* 1200px */
   margin: calc(var(--spacing-3xl) * 2) auto;
   padding-inline: var(--spacing-lg);
 }
@@ -255,13 +290,12 @@
 }
 
 .main-container .features-container .image > img {
-  width: 70rem;
+  /* width: 60rem; */
   filter: contrast(1.1);
 }
 .main-container .features-container .image-wrapper {
   position: absolute;
   inset: 0;
-  /* animation: scale 1000ms infinite alternate; */
 }
 .main-container .features-container .image-wrapper img {
   width: 14rem;
@@ -405,6 +439,25 @@ footer {
   gap: var(--gap-md);
 }
 
+.footer-container .pages a,
+.footer-container .utility-pages a {
+  position: relative;
+}
+
+.footer-container .pages a::after,
+.footer-container .utility-pages a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.1rem;
+  background-color: var(--cl-dark-100);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--transition-base);
+}
+
 .footer-container .social-links a {
   width: 2rem;
   height: 2rem;
@@ -433,11 +486,15 @@ footer {
 }
 
 /* hovering styles */
-.hero-section .navbar a:hover {
-  color: var(--cl-dark);
+.header .navbar li:hover {
+  color: var(--cl-primary);
 }
 
-.hero-section .shopping-cart .shopping-cart-btn:hover {
+header .navbar li:hover::after {
+  transform: scaleX(1);
+}
+
+.header .shopping-cart .shopping-cart-btn:hover {
   background-color: var(--cl-primary);
   color: var(--cl-light);
   border-color: var(--cl-primary-200);
@@ -477,9 +534,9 @@ footer {
   background-color: var(--cl-neutral);
 }
 
-.footer-container .pages a:hover,
-.footer-container .utility-pages a:hover {
-  text-decoration: underline;
+.footer-container .pages a:hover::after,
+.footer-container .utility-pages a:hover::after {
+  transform: scaleX(1);
 }
 
 /* animation */

@@ -28,45 +28,50 @@
     />
   </head>
   <body>
+    <header class="header" data-aos="fade-down">
+      <nav class="navbar | d-flex justify-content-between align-items-center">
+        <div class="logo">
+          <a href="./index.html">
+            <img
+              src="./assets/images/logo.svg"
+              alt="logo svg that contains a burger logo with brand name of BURGERY"
+            />
+          </a>
+        </div>
+
+        <div class="nav-menu">
+          <ul
+            class="navbar-nav | d-flex justify-content-center align-items-start"
+            role="list"
+          >
+            <li role="listitem"><a href="./index.html">Home</a></li>
+            <li role="listitem"><a href="./pages/menu.html">Menu</a></li>
+            <li role="listitem"><a href="./pages/blogs.html">Blog</a></li>
+            <li role="listitem">
+              <a href="./pages/about.html">About Us</a>
+            </li>
+            <li role="listitem">
+              <a href="./pages/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="shopping-cart">
+          <button
+            class="shopping-cart-btn bg-primary-100 fs-sm fw-semibold border border-radius d-flex align-items-center cursor-pointer text-secondary"
+          >
+            <i class="fa-solid fa-bag-shopping"></i>
+            Cart
+          </button>
+        </div>
+
+        <div class="hamburger-menu">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </header>
     <!-- hero -->
     <div class="hero-section">
-      <header class="hero-header" data-aos="fade-down">
-        <nav class="navbar | d-flex justify-content-between align-items-center">
-          <div class="logo">
-            <a href="./index.html">
-              <img
-                loading="lazy"
-                src="./assets/images/logo.svg"
-                alt="logo svg that contains a burger logo with brand name of BURGERY"
-              />
-            </a>
-          </div>
-
-          <div class="nav-menu">
-            <ul
-              class="navbar-nav | d-flex justify-content-center align-items-start"
-              role="list"
-            >
-              <li role="listitem"><a href="./index.html">Home</a></li>
-              <li role="listitem"><a href="./pages/menu.html">Menu</a></li>
-              <li role="listitem"><a href="./pages/blogs.html">Blog</a></li>
-              <li role="listitem"><a href="./pages/about.html">About Us</a></li>
-              <li role="listitem">
-                <a href="./pages/contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class="shopping-cart">
-            <button
-              class="shopping-cart-btn bg-primary-100 fs-sm fw-semibold border border-radius d-flex align-items-center cursor-pointer text-secondary"
-            >
-              <i class="fa-solid fa-bag-shopping"></i>
-              Cart
-            </button>
-          </div>
-        </nav>
-      </header>
       <div class="hero-body">
         <div
           class="hero-contents d-flex justify-content-between align-items-center"
@@ -80,9 +85,16 @@
             <h1
               class="heading ff-secondary fs-primary-heading fw-bold heading-color"
             >
-              Fresh & <br />
-              Delicious
+              Fresh & Delicious
             </h1>
+            <p
+              class="d-none fs-md fw-semibold text-primary-100 text-center text-balance"
+            >
+              Crafted with the finest, freshest ingredients, our burgers deliver
+              unmatched flavor in every bite. Precision, quality, and speed come
+              together to create a fast-food experience that’s anything but
+              ordinary.
+            </p>
             <div class="hero-buttons d-flex align-items-center gap-md">
               <a href="./pages/contact.html" class="hero-des-btn shop-btn">
                 Contact us
@@ -97,7 +109,6 @@
 
           <div class="hero-image" data-aos="fade-right">
             <img
-              loading="lazy"
               src="./assets/images/burgerImg-hero-1.png"
               alt="burger image"
             />
@@ -112,7 +123,6 @@
             <a href="#">
               <div class="card-img">
                 <img
-                  loading="lazy"
                   src="./assets/images/burgerImg-hero-2.png"
                   alt="burger image"
                   width="100"
@@ -130,7 +140,6 @@
             <a href="#">
               <div class="card-img">
                 <img
-                  loading="lazy"
                   src="./assets/images/burgerImg-hero-3.png"
                   alt="burger image"
                   width="120"
@@ -148,7 +157,6 @@
             <a href="#">
               <div class="card-img">
                 <img
-                  loading="lazy"
                   src="./assets/images/burgerImg-hero-4.png"
                   alt="burger image"
                   width="120"
@@ -166,7 +174,6 @@
             <a href="#">
               <div class="card-img">
                 <img
-                  loading="lazy"
                   src="./assets/images/burgerImg-hero-5.png"
                   alt="burger image"
                   width="130"
@@ -193,7 +200,7 @@
           <div
             class="section-heading ff-primary d-grid gap-sm place-items-center text-center"
           >
-            <h2 class="heading fs-2xl fw-bold text-secondary">Menu</h2>
+            <h2 class="heading section-heading-fs">Menu</h2>
             <h3
               class="sub-heading fs-secondary-heading fw-bold ff-secondary heading-color"
             >
@@ -223,7 +230,6 @@
                 >
                   <a href="#">
                     <img
-                      loading="lazy"
                       src="./assets/images/burgerImg-hero-3.png"
                       alt="burger image"
                       width="100"
@@ -271,7 +277,6 @@
                 >
                   <a href="#">
                     <img
-                      loading="lazy"
                       src="./assets/images/burgerImg-hero-2.png"
                       alt="burger image"
                       width="100"
@@ -319,7 +324,6 @@
                 >
                   <a href="#">
                     <img
-                      loading="lazy"
                       src="./assets/images/burgerImg-hero-6.png"
                       alt="burger image"
                       width="100"
@@ -367,7 +371,6 @@
                 >
                   <a href="#">
                     <img
-                      loading="lazy"
                       src="./assets/images/burgerImg-hero-4.png"
                       alt="burger image"
                       width="100"
@@ -415,7 +418,6 @@
                 >
                   <a href="#">
                     <img
-                      loading="lazy"
                       src="./assets/images/burgerImg-hero-5.png"
                       alt="burger image"
                       width="100"
@@ -470,18 +472,16 @@
           <div class="features-container">
             <div class="features" data-aos="fade-right">
               <div class="features-heading">
-                <h2
-                  class="heading ff-secondary fw-semibold fs-3xl text-secondary"
-                >
+                <h2 class="heading ff-secondary section-heading-fs">
                   Why Choose Us
                 </h2>
                 <h3
-                  class="sub-heading fs-6xl fw-bold ff-primary heading-color text-wrap w-100"
+                  class="sub-heading fs-secondary-heading fw-bold ff-primary heading-color text-wrap w-100"
                 >
                   We Make The Best Burgers In Our Restaurant
                 </h3>
               </div>
-              <p class="description fs-lg fw-semibold heading-color fs-lg">
+              <p class="description fs-md fw-semibold heading-color">
                 Assertively envisioneer high-payoff architectures after
                 interactive service. Collaboratively whiteboard pandemic
                 intellectual capital without cross-platform channels.
@@ -489,7 +489,6 @@
               <div class="feature-one d-flex align-items-center gap-sm">
                 <div class="feature-img bg-primary-100 border-radius-circle">
                   <img
-                    loading="lazy"
                     src="./assets/images/stars-star-svgrepo-com.svg"
                     alt=""
                     width="70"
@@ -507,12 +506,7 @@
                 <div
                   class="feature-img bg-primary-100 border-radius-circle p-sm"
                 >
-                  <img
-                    loading="lazy"
-                    src="./assets/images/fast-time.png"
-                    alt=""
-                    width="50"
-                  />
+                  <img src="./assets/images/fast-time.png" alt="" width="50" />
                 </div>
                 <div class="feature-desc d-grid gap-xs">
                   <h4>Quick & Convenient Service</h4>
@@ -527,21 +521,18 @@
             <div class="image relative" data-aos="fade-left">
               <div class="image-wrapper">
                 <img
-                  loading="lazy"
                   src="./assets/images/1-removebg-preview.png"
                   class="delicious"
                   alt=""
                   data-aos="zoom-in"
                 />
                 <img
-                  loading="lazy"
                   src="./assets/images/2-removebg-preview.png"
                   class="fresh"
                   alt=""
                   data-aos="zoom-in"
                 />
                 <img
-                  loading="lazy"
                   src="./assets/images/3-removebg-preview.png"
                   class="tasty"
                   alt=""
@@ -549,9 +540,9 @@
                 />
               </div>
               <img
-                loading="lazy"
                 src="./assets/images/burger-with-flying-elements-removebg-preview.png"
                 alt=""
+                style="width: 60rem"
               />
             </div>
           </div>
@@ -562,7 +553,7 @@
           <div
             class="section-heading ff-primary d-grid gap-sm place-items-center text-center"
           >
-            <h2 class="heading fs-2xl fw-bold text-secondary">Testimonials</h2>
+            <h2 class="heading section-heading-fs">Testimonials</h2>
             <h3
               class="sub-heading fs-secondary-heading fw-bold ff-secondary heading-color"
             >
@@ -576,11 +567,7 @@
               <!-- 1 -->
               <div class="swiper-slide testimonial testimonial1">
                 <div class="image">
-                  <img
-                    loading="lazy"
-                    src="./assets/images/testimonial-img-3.jpg"
-                    alt=""
-                  />
+                  <img src="./assets/images/testimonial-img-3.jpg" alt="" />
                 </div>
                 <div class="rating">
                   <i class="fa-solid fa-star"></i>
@@ -604,7 +591,6 @@
               <div class="swiper-slide testimonial testimonial2">
                 <div class="image">
                   <img
-                    loading="lazy"
                     src="./assets/images/testimonial-img-4.jpg"
                     alt=""
                     width="100"
@@ -634,7 +620,6 @@
               <div class="swiper-slide testimonial testimonial3">
                 <div class="image">
                   <img
-                    loading="lazy"
                     src="./assets/images/testimonial-img-5.jpg"
                     alt=""
                     width="100"
@@ -662,7 +647,6 @@
               <div class="swiper-slide testimonial testimonial4">
                 <div class="image">
                   <img
-                    loading="lazy"
                     src="./assets/images/testimonial-img-2.jpg"
                     alt=""
                     width="100"
@@ -690,7 +674,6 @@
               <div class="swiper-slide testimonial testimonial5">
                 <div class="image">
                   <img
-                    loading="lazy"
                     src="./assets/images/testimonial-img-1.jpg"
                     alt=""
                     width="100"
@@ -721,7 +704,6 @@
               <div class="swiper-slide testimonial testimonial6">
                 <div class="image">
                   <img
-                    loading="lazy"
                     src="./assets/images/testimonial-img-6.jpg"
                     alt=""
                     width="100"
@@ -756,7 +738,7 @@
           <div
             class="section-heading ff-primary d-grid gap-sm place-items-center text-center"
           >
-            <h2 class="heading fs-2xl fw-bold text-secondary">News & Blog</h2>
+            <h2 class="heading section-heading-fs">News & Blog</h2>
             <h3
               class="sub-heading fs-secondary-heading fw-bold ff-secondary heading-color"
             >
@@ -768,11 +750,7 @@
             <!-- blog 1 -->
             <article class="blog first-blog d-grid gap-md">
               <div class="image o-hidden">
-                <img
-                  loading="lazy"
-                  src="./assets/images/blog-image-1.jpg"
-                  alt=""
-                />
+                <img src="./assets/images/blog-image-1.jpg" alt="" />
               </div>
               <div class="description d-grid gap-sm">
                 <h4 class="title text-primary fs-lg fw-semibold">
@@ -793,11 +771,7 @@
             <!-- blog 2 -->
             <article class="blog first-blog d-grid gap-md">
               <div class="image o-hidden">
-                <img
-                  loading="lazy"
-                  src="./assets/images/blog-image-2.jpg"
-                  alt=""
-                />
+                <img src="./assets/images/blog-image-2.jpg" alt="" />
               </div>
               <div class="description d-grid gap-sm">
                 <h4 class="title text-primary fs-lg fw-semibold">
@@ -818,11 +792,7 @@
             <!-- blog 3 -->
             <article class="blog first-blog d-grid gap-md">
               <div class="image o-hidden">
-                <img
-                  loading="lazy"
-                  src="./assets/images/blog-image-3.jpg"
-                  alt=""
-                />
+                <img src="./assets/images/blog-image-3.jpg" alt="" />
               </div>
               <div class="description d-grid gap-sm">
                 <h4 class="title text-primary fs-lg fw-semibold">
@@ -852,7 +822,7 @@
           <div class="service-info w-fit-content">
             <div class="logo w-fit-content">
               <a href="./index.html">
-                <img loading="lazy" src="./assets/images/logo.svg" alt="logo" />
+                <img src="./assets/images/logo.svg" alt="logo" />
               </a>
             </div>
             <div class="info d-grid gap-lg">

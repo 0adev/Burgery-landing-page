@@ -54,7 +54,8 @@
   --fs-8xl: 3.5rem;
   --fs-9xl: 3.875rem;
   --fs-primary-heading: clamp(3rem, 8vw, calc(var(--fs-8xl) * 2));
-  --fs-secondary-heading: clamp(3rem, 8vw, calc(var(--fs-8xl)));
+  --fs-secondary-heading: clamp(var(--fs-4xl), 8vw, calc(var(--fs-8xl)));
+  --section-heading-fs: clamp(var(--fs-lg), 8vw, calc(var(--fs-2xl)));
 
   /* Font Weights */
   --font-weight-light: 300;
@@ -151,6 +152,9 @@
 .text-primary {
   color: var(--text-primary);
 }
+.text-primary-100 {
+  color: var(--cl-dark-100);
+}
 .text-secondary {
   color: var(--text-secondary);
 }
@@ -215,6 +219,11 @@
 .fs-secondary-heading {
   font-size: var(--fs-secondary-heading);
   line-height: 1;
+}
+.section-heading-fs {
+  font-size: var(--section-heading-fs);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-secondary);
 }
 
 /* Font Weights */
