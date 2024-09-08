@@ -153,6 +153,10 @@ textarea:not([rows]) {
     background-attachment: fixed;
     overflow: hidden;
   }
+  .nav-menu.show {
+    display: block;
+  }
+
   .header .nav-menu .navbar-nav {
     flex-direction: column;
     justify-content: center;
@@ -216,13 +220,14 @@ textarea:not([rows]) {
   .header .nav-menu {
     background-position: 200px;
     background-size: 180%;
+    width: calc(100% - 4rem);
   }
 }
 
 @media (max-width: 550px) {
   /* header */
   .header .nav-menu {
-    background-position: 150px;
+    background-position: 115px;
     background-size: 250%;
   }
 

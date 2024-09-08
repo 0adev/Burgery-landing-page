@@ -16,7 +16,7 @@ AOS.init({
 const swiper = new Swiper(".swiper", {
   slidesPerView: 1,
   spaceBetween: 20,
-  freeMode: true,
+  freeMode: false,
   loop: true,
   autoplay: {
     delay: 3500,
@@ -42,3 +42,39 @@ const swiper = new Swiper(".swiper", {
     },
   },
 });
+// DOM Init
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+const menuList = document.querySelector(".nav-menu");
+
+// Debounce to avoid rapid clicks
+let isThrottled = false;
+
+function toggleMenu() {
+  if (isThrottled) return; // Prevent rapid clicks
+  isThrottled = true;
+
+  if (menuList.classList.contains("show")) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+
+  setTimeout(() => (isThrottled = false), 300);
+}
+
+function openMenu() {
+  menuList.classList.add("show");
+  hamburgerMenu.innerHTML = `<i class="fa-solid fa-x"></i>`;
+  hamburgerMenu.setAttribute("aria-expanded", "true");
+  hamburgerMenu.setAttribute("aria-label", "Close Menu");
+}
+
+function closeMenu() {
+  menuList.classList.remove("show");
+  hamburgerMenu.innerHTML = `<i class="fa-solid fa-bars"></i>`;
+  hamburgerMenu.setAttribute("aria-expanded", "false");
+  hamburgerMenu.setAttribute("aria-label", "Open Menu");
+}
+
+// Event listener
+hamburgerMenu.addEventListener("click", toggleMenu);

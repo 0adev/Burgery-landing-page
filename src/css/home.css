@@ -290,7 +290,7 @@
 }
 
 .main-container .features-container .image > img {
-  /* width: 60rem; */
+  width: 60rem;
   filter: contrast(1.1);
 }
 .main-container .features-container .image-wrapper {
