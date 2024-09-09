@@ -84,9 +84,7 @@ function showBackToTopButton() {
     document.documentElement.scrollTop > 600
   ) {
     backToTopButton.classList.add("show");
-    // backToTopButton.style.display = "block";
   } else {
-    // backToTopButton.style.display = "none";
     backToTopButton.classList.remove("show");
   }
 }
