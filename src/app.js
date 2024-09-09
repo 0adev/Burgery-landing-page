@@ -42,9 +42,11 @@ const swiper = new Swiper(".swiper", {
     },
   },
 });
+
 // DOM Init
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const menuList = document.querySelector(".nav-menu");
+const backToTopButton = document.querySelector(".back-to-top-btn");
 
 // Debounce to avoid rapid clicks
 let isThrottled = false;
@@ -76,5 +78,25 @@ function closeMenu() {
   hamburgerMenu.setAttribute("aria-label", "Open Menu");
 }
 
+function showBackToTopButton() {
+  if (
+    document.body.scrollTop > 600 ||
+    document.documentElement.scrollTop > 600
+  ) {
+    backToTopButton.classList.add("show");
+    // backToTopButton.style.display = "block";
+  } else {
+    // backToTopButton.style.display = "none";
+    backToTopButton.classList.remove("show");
+  }
+}
+
+function backToTop(e) {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
 // Event listener
 hamburgerMenu.addEventListener("click", toggleMenu);
+window.addEventListener("scroll", showBackToTopButton);
+backToTopButton.addEventListener("click", backToTop);

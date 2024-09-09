@@ -254,20 +254,20 @@
 .main-container .menu .button-next {
   position: absolute;
   right: 0;
-  top: 50%;
+  top: 60%;
   z-index: var(--z-index-99);
   font-size: var(--fs-3xl);
-  color: var(--cl-neutral-400);
+  color: var(--cl-primary-300);
   cursor: var(--cursor-pointer);
 }
 
 .main-container .menu .button-prev {
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 60%;
   z-index: var(--z-index-99);
   font-size: var(--fs-3xl);
-  color: var(--cl-neutral-400);
+  color: var(--cl-primary-300);
   cursor: var(--cursor-pointer);
 }
 

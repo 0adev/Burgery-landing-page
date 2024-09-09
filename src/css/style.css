@@ -87,6 +87,25 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+/* general styles */
+.back-to-top-btn {
+  position: fixed;
+  right: 3rem;
+  bottom: 2rem;
+  z-index: var(--z-index-99);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-base);
+  background-color: #0000;
+  backdrop-filter: blur(20px);
+  border-radius: var(--border-radius-circle);
+}
+
+.back-to-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 /* media queries */
 @media (max-width: 1344px) {
   /* === main === */
@@ -137,7 +156,7 @@ textarea:not([rows]) {
   .header .nav-menu {
     display: none;
     position: absolute;
-    top: 24rem;
+    top: 26rem;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 8px 8px 0 var(--cl-dark);
@@ -221,6 +240,9 @@ textarea:not([rows]) {
     background-position: 200px;
     background-size: 180%;
     width: calc(100% - 4rem);
+  }
+  .back-to-top-btn {
+    right: 1.25rem;
   }
 }
 
