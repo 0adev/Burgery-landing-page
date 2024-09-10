@@ -147,6 +147,9 @@
 .bg-primary-100 {
   background-color: var(--cl-primary-100);
 }
+.bg-primary-200 {
+  background-color: var(--cl-primary-200);
+}
 
 /* Text Colors */
 .text-primary {
@@ -450,6 +453,9 @@
 /* Borders */
 .border {
   border: var(--border-width-base) solid var(--cl-primary-200);
+}
+.border-none {
+  border: none;
 }
 
 /* Border Radius */

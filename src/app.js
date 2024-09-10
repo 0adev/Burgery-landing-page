@@ -48,6 +48,25 @@ const hamburgerMenu = document.querySelector(".hamburger-menu");
 const menuList = document.querySelector(".nav-menu");
 const backToTopButton = document.querySelector(".back-to-top-btn");
 
+const currentPage = window.location.pathname;
+
+// Highlight active link
+function highlightActiveLink() {
+  const links = document.querySelectorAll(".nav-menu li a");
+
+  links.forEach((link) => {
+    const linkPath = new URL(link.href).pathname;
+
+    if (linkPath === currentPage) {
+      link.classList.add("active");
+    }
+  });
+}
+
+highlightActiveLink();
+
+// menu toggle function
+
 // Debounce to avoid rapid clicks
 let isThrottled = false;
 
@@ -78,10 +97,11 @@ function closeMenu() {
   hamburgerMenu.setAttribute("aria-label", "Open Menu");
 }
 
+// back to top function
 function showBackToTopButton() {
   if (
-    document.body.scrollTop > 600 ||
-    document.documentElement.scrollTop > 600
+    document.body.scrollTop > 300 ||
+    document.documentElement.scrollTop > 300
   ) {
     backToTopButton.classList.add("show");
   } else {

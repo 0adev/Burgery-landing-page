@@ -1,0 +1,320 @@
+@import url(./utils-variables.css);
+
+/* === header === */
+.header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.071);
+  backdrop-filter: blur(50px);
+  z-index: 999;
+}
+
+.header .navbar {
+  max-width: 75rem; /* 1200px */
+  margin: 0 auto;
+  padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+.header .navbar .logo img {
+  width: 8.125rem; /* 130px */
+}
+
+.header .navbar .navbar-nav {
+  gap: 2.25rem;
+}
+
+.header .navbar li {
+  font-size: var(--fs-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--cl-dark);
+  position: relative;
+}
+.header .navbar li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.15rem;
+  width: 100%;
+  height: 3px;
+  background-color: var(--cl-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--transition-base);
+  display: none;
+}
+
+.header .hamburger-menu {
+  cursor: pointer;
+  font-size: var(--fs-lg);
+  display: none;
+  color: var(--cl-dark);
+}
+
+.header .navbar a {
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.header .shopping-cart .shopping-cart-btn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  gap: calc(var(--gap-sm) / 2);
+  transition: var(--transition-fast);
+}
+
+/* back to top button  */
+.back-to-top-btn {
+  position: fixed;
+  right: 3rem;
+  bottom: 2rem;
+  z-index: var(--z-index-99);
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition-base);
+  background-color: #0000;
+  backdrop-filter: blur(20px);
+  border-radius: var(--border-radius-circle);
+}
+
+.back-to-top-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.active {
+  color: var(--cl-primary);
+}
+
+/* ========= footer section ========= */
+footer {
+  margin-top: calc(var(--spacing-3xl) * 3);
+  color: var(--cl-dark);
+  background-image: url(/src/assets/images/footer-img.png);
+  background-position: 600px;
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-color: rgb(238, 225, 190);
+  border-top: var(--border-width-sm) solid var(--cl-dark);
+}
+
+.footer-container {
+  background-color: #ffffff00;
+  backdrop-filter: blur(40px);
+  padding: var(--spacing-xl) var(--spacing-2xl);
+}
+
+.footer-container .footer-wrapper {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: "service-info pages utility-pages subscription";
+  gap: var(--gap-xl);
+}
+
+.footer-container .service-info {
+  grid-area: service-info;
+}
+.footer-container .pages {
+  grid-area: pages;
+}
+.footer-container .utility-pages {
+  grid-area: utility-pages;
+}
+.footer-container .subscription {
+  grid-area: subscription;
+}
+
+.footer-container .pages,
+.footer-container .utility-pages,
+.footer-container .subscription {
+  margin-top: var(--spacing-xl);
+  display: grid;
+  place-content: start;
+  gap: var(--gap-md);
+}
+
+.footer-container .pages a,
+.footer-container .utility-pages a {
+  position: relative;
+}
+
+.footer-container .pages a::after,
+.footer-container .utility-pages a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.1rem;
+  background-color: var(--cl-dark-100);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--transition-base);
+}
+
+.footer-container .social-links a {
+  width: 2rem;
+  height: 2rem;
+  padding: var(--spacing-xs);
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: var(--cl-light);
+  transition: var(--transition-fast);
+}
+
+.footer-container form #email-input {
+  border: none;
+  padding: var(--spacing-md) 0.875rem;
+  color: var(--cl-neutral-600);
+}
+.footer-container form button {
+  border: none;
+  padding: var(--spacing-md) 0.875rem;
+  color: var(--cl-light);
+  background-color: var(--cl-primary);
+  font-size: var(--fs-md);
+  font-weight: var(--font-weight-semibold);
+  cursor: var(--cursor-pointer);
+  transition: var(--transition-fast);
+}
+
+/* hovering styles */
+
+.hero-section .hero-description .hero-des-btn:hover {
+  background-color: var(--cl-primary);
+  color: var(--cl-light);
+}
+
+.hero-section .card:hover {
+  background-color: var(--cl-primary-400);
+}
+
+.hero-section .card:hover .card-title,
+.hero-section .card:hover .reviews,
+.hero-section .card:hover .price {
+  color: var(--cl-light);
+}
+
+.hero-section .card:hover img {
+  transform: scale(1.1) rotate(15deg);
+}
+
+.main-container .menu-section .addtocart-btn:hover {
+  background-color: var(--cl-primary);
+  color: var(--cl-light);
+}
+
+.main-container .blog-section .description a:hover {
+  text-decoration: underline;
+  color: var(--cl-primary);
+}
+
+.footer-container .social-links a:hover,
+.footer-container form button:hover {
+  background-color: var(--cl-neutral);
+}
+
+.footer-container .pages a:hover::after,
+.footer-container .utility-pages a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ====== hovering styles ======= */
+.header .navbar li:hover {
+  color: var(--cl-primary);
+}
+
+.header .navbar li:hover::after {
+  transform: scaleX(1);
+}
+
+.header .shopping-cart .shopping-cart-btn:hover {
+  background-color: var(--cl-primary);
+  color: var(--cl-light);
+  border-color: var(--cl-primary-200);
+}
+
+@media (max-width: 810px) {
+  /* header */
+  .header .shopping-cart {
+    display: none;
+  }
+  .header .nav-menu {
+    display: none;
+    position: absolute;
+    top: 26rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 8px 8px 0 var(--cl-dark);
+    width: calc(100% - 10rem);
+    box-shadow: 8px 8px 0 var(--cl-primary-600);
+    border: var(--border-width-sm) solid var(--cl-dark);
+    border-radius: 1.5rem;
+    background-color: rgb(255, 246, 217);
+    background-image: url(/src/assets/images/footer-img.png);
+    background-position: 250px;
+    background-repeat: no-repeat;
+    background-size: 130%;
+    background-attachment: fixed;
+    overflow: hidden;
+  }
+  .nav-menu.show {
+    display: block;
+  }
+
+  .header .nav-menu .navbar-nav {
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+  .header .nav-menu li {
+    font-size: var(--fs-2xl);
+    font-family: var(--gluten-ff);
+  }
+  .header .navbar li::after {
+    display: block;
+  }
+  .header .hamburger-menu {
+    display: block;
+  }
+
+  /* === footer === */
+  .footer-container .footer-wrapper {
+    grid-template-areas:
+      "pages service-info"
+      "utility-pages subscription ";
+    gap: var(--gap-lr);
+  }
+
+  .footer-container .utility-pages {
+    place-self: start;
+  }
+}
+@media (max-width: 720px) {
+  /* header */
+  .header .nav-menu {
+    background-position: 200px;
+    background-size: 180%;
+    width: calc(100% - 4rem);
+  }
+  .back-to-top-btn {
+    right: 1.25rem;
+  }
+}
+
+@media (max-width: 550px) {
+  /* header */
+  .header .nav-menu {
+    background-position: 115px;
+    background-size: 250%;
+  }
+
+  /* === footer === */
+  .footer-container .footer-wrapper {
+    grid-template-areas:
+      "service-info"
+      "pages"
+      "utility-pages"
+      "subscription";
+  }
+}

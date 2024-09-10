@@ -1,0 +1,59 @@
+@import url(./utils-variables.css);
+
+.menu .container {
+  max-width: 75rem;
+  margin: calc(var(--spacing-3xl) * 2) auto var(--spacing-sm);
+  padding-inline: var(--spacing-2xl);
+}
+
+.menu .category {
+  border-bottom: var(--border-width-sm) solid var(--cl-dark);
+  padding-bottom: var(--spacing-md);
+}
+
+.menu .card {
+  border: var(--border-width-sm) solid var(--cl-dark);
+  border-radius: calc(var(--border-radius) * 2);
+  padding: var(--spacing-lg);
+  height: 28rem;
+}
+
+.menu .card img {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.menu .card .add-to-cart-btn {
+  background-color: var(--cl-primary-200);
+  border: var(--border-width-sm) solid var(--cl-neutral-600);
+  border-radius: var(--border-radius);
+  color: var(--cl-neutral-600);
+  padding: var(--spacing-sm);
+  font-size: var(--fs-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: var(--cursor-pointer);
+  transition: var(--transition-fast);
+}
+
+/* hovering styles */
+.menu .category li:hover {
+  color: var(--cl-dark);
+}
+
+.menu .card .add-to-cart-btn:hover {
+  background-color: var(--cl-neutral-600);
+  color: var(--cl-light);
+}
+
+/* media queries */
+@media (max-width: 600px) {
+  .menu .card {
+    width: 20rem;
+    text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .menu .card {
+    width: initial;
+  }
+}
