@@ -2,7 +2,7 @@
 
 .menu .container {
   max-width: 75rem;
-  margin: calc(var(--spacing-3xl) * 2) auto var(--spacing-sm);
+  margin: var(--spacing-3xl) auto var(--spacing-sm);
   padding-inline: var(--spacing-2xl);
 }
 
