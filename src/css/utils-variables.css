@@ -515,6 +515,10 @@ d.block {
 .place-items-center {
   place-items: center;
 }
+
+.place-content-start {
+  place-content: start;
+}
 .place-content-center {
   place-content: center;
 }

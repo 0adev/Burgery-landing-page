@@ -43,10 +43,12 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-// DOM Init
+// == DOM Init ==
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const menuList = document.querySelector(".nav-menu");
 const backToTopButton = document.querySelector(".back-to-top-btn");
+const categoryItems = document.querySelectorAll(".category .item");
+const menuCards = document.querySelectorAll(".menu-cards .card");
 
 const currentPage = window.location.pathname;
 
@@ -65,7 +67,7 @@ function highlightActiveLink() {
 
 highlightActiveLink();
 
-// menu toggle function
+// == Toggle menu ==
 
 // Debounce to avoid rapid clicks
 let isThrottled = false;
@@ -97,7 +99,7 @@ function closeMenu() {
   hamburgerMenu.setAttribute("aria-label", "Open Menu");
 }
 
-// back to top function
+// == Back to top ==
 function showBackToTopButton() {
   if (
     document.body.scrollTop > 300 ||
@@ -114,7 +116,58 @@ function backToTop(e) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-// Event listener
+// == filter burgers by category ==
+const message = document.createElement("p");
+message.classList.add("ff-primary", "fs-xl", "fw-semibold", "text-primary");
+message.innerHTML = `
+ <i class="fa-solid fa-circle-info"></i> Item Not Found!
+`;
+message.style.display = "none";
+document.querySelector(".menu-cards").appendChild(message);
+
+function filterCards(category) {
+  let visibleCardCount = 0;
+
+  // Show/Hide cards based on category
+  menuCards.forEach((card) => {
+    const cardCategory = card.getAttribute("data-category");
+
+    if (category === "all") {
+      card.style.display = "block";
+      visibleCardCount++;
+    } else {
+      // Show only matching category cards
+      if (cardCategory === category) {
+        card.style.display = "block";
+        visibleCardCount++;
+      } else {
+        card.style.display = "none";
+      }
+    }
+  });
+
+  if (visibleCardCount === 0) {
+    message.style.display = "block";
+  } else {
+    message.style.display = "none";
+  }
+}
+
+categoryItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    const selectedCategory = this.getAttribute("data-category");
+
+    categoryItems.forEach((categoryItem) =>
+      categoryItem.classList.remove("active")
+    );
+
+    this.classList.add("active");
+
+    filterCards(selectedCategory);
+  });
+});
+
+// == Event listener ==
 hamburgerMenu.addEventListener("click", toggleMenu);
 window.addEventListener("scroll", showBackToTopButton);
 backToTopButton.addEventListener("click", backToTop);
