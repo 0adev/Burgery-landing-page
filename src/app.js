@@ -12,7 +12,7 @@ AOS.init({
   duration: 1000,
   offset: 100,
   once: true,
-  mirror: true,
+  mirror: false,
 });
 
 const swiper = new Swiper(".swiper", {
@@ -74,6 +74,8 @@ highlightActiveLink();
 let isThrottled = false;
 
 function toggleMenu() {
+  console.log(hamburgerMenu);
+  console.log(menuList);
   if (isThrottled) return; // Prevent rapid clicks
   isThrottled = true;
 
@@ -124,7 +126,6 @@ message.innerHTML = `
  <i class="fa-solid fa-circle-info"></i> Item Not Found!
 `;
 message.style.display = "none";
-document.querySelector(".menu-cards").appendChild(message);
 
 function filterCards(category) {
   let visibleCardCount = 0;
@@ -148,6 +149,7 @@ function filterCards(category) {
   });
 
   if (visibleCardCount === 0) {
+    document.querySelector(".menu-cards").appendChild(message);
     message.style.display = "block";
   } else {
     message.style.display = "none";

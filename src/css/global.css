@@ -178,47 +178,6 @@ footer {
   transition: var(--transition-fast);
 }
 
-/* hovering styles */
-
-.hero-section .hero-description .hero-des-btn:hover {
-  background-color: var(--cl-primary);
-  color: var(--cl-light);
-}
-
-.hero-section .card:hover {
-  background-color: var(--cl-primary-400);
-}
-
-.hero-section .card:hover .card-title,
-.hero-section .card:hover .reviews,
-.hero-section .card:hover .price {
-  color: var(--cl-light);
-}
-
-.hero-section .card:hover img {
-  transform: scale(1.1) rotate(15deg);
-}
-
-.main-container .menu-section .addtocart-btn:hover {
-  background-color: var(--cl-primary);
-  color: var(--cl-light);
-}
-
-.main-container .blog-section .description a:hover {
-  text-decoration: underline;
-  color: var(--cl-primary);
-}
-
-.footer-container .social-links a:hover,
-.footer-container form button:hover {
-  background-color: var(--cl-neutral);
-}
-
-.footer-container .pages a:hover::after,
-.footer-container .utility-pages a:hover::after {
-  transform: scaleX(1);
-}
-
 /* ====== hovering styles ======= */
 .header .navbar li:hover {
   color: var(--cl-primary);
@@ -234,6 +193,17 @@ footer {
   border-color: var(--cl-primary-200);
 }
 
+.footer-container .social-links a:hover,
+.footer-container form button:hover {
+  background-color: var(--cl-neutral);
+}
+
+.footer-container .pages a:hover::after,
+.footer-container .utility-pages a:hover::after {
+  transform: scaleX(1);
+}
+
+/* media queries */
 @media (max-width: 810px) {
   /* header */
   .header .shopping-cart {

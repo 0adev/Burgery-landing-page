@@ -12,7 +12,7 @@
 .hero-section .hero-body {
   margin: var(--spacing-lg) 0;
   display: grid;
-  gap: 6.5rem;
+  gap: 7rem;
 }
 
 .hero-section .hero-description > .heading {
@@ -42,14 +42,14 @@
   text-decoration: none;
 }
 
-.hero-section .hero-description .shop-btn {
+.hero-section .hero-description .contact-btn {
   border-radius: var(--border-radius);
   background-color: var(--cl-primary);
   color: var(--cl-light);
 }
 
 .hero-section .hero-body .hero-image img {
-  width: 29rem;
+  width: 30rem;
 }
 
 /* hero burger cards */
@@ -333,6 +333,41 @@
   to {
     transform: scale(1.05);
   }
+}
+
+/* hovering styles */
+
+.hero-section .hero-description .menu-btn:hover {
+  color: var(--cl-neutral);
+  background-color: var(--cl-secondary-300);
+}
+.hero-section .hero-description .contact-btn:hover {
+  color: var(--cl-primary);
+  background-color: var(--cl-primary-100);
+}
+
+.hero-section .card:hover {
+  background-color: var(--cl-primary-400);
+}
+
+.hero-section .card:hover .card-title,
+.hero-section .card:hover .reviews,
+.hero-section .card:hover .price {
+  color: var(--cl-light);
+}
+
+.hero-section .card:hover img {
+  transform: scale(1.1) rotate(15deg);
+}
+
+.main-container .menu-section .addtocart-btn:hover {
+  background-color: var(--cl-primary);
+  color: var(--cl-light);
+}
+
+.main-container .blog-section .description a:hover {
+  text-decoration: underline;
+  color: var(--cl-primary);
 }
 
 /* ====== media queries =======*/

@@ -44,7 +44,7 @@
 
 /* hovering styles */
 .menu .category li:hover {
-  color: var(--cl-dark);
+  color: var(--cl-primary);
 }
 
 .menu .card .add-to-cart-btn:hover {
@@ -54,10 +54,6 @@
 
 /* media queries */
 @media (max-width: 600px) {
-  /* .menu-cards {
-    grid-template-columns: 1fr;
-    place-items: center;
-  } */
   .menu .card {
     width: 20rem;
     text-align: center;
