@@ -11,6 +11,8 @@ import "aos/dist/aos.css";
 AOS.init({
   duration: 1000,
   offset: 100,
+  once: true,
+  mirror: true,
 });
 
 const swiper = new Swiper(".swiper", {
@@ -20,7 +22,7 @@ const swiper = new Swiper(".swiper", {
   loop: true,
   autoplay: {
     delay: 3500,
-    disableOnInteraction: true,
+    disableOnInteraction: false,
   },
   navigation: {
     nextEl: ".button-next",
@@ -68,7 +70,6 @@ function highlightActiveLink() {
 highlightActiveLink();
 
 // == Toggle menu ==
-
 // Debounce to avoid rapid clicks
 let isThrottled = false;
 
