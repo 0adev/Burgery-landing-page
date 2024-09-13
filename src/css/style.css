@@ -16,6 +16,7 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  scroll-behavior: smooth;
 }
 
 body,
@@ -87,5 +88,5 @@ textarea:not([rows]) {
 }
 
 :target {
-  scroll-margin-block: 5ex;
+  scroll-margin-block: 20ex;
 }

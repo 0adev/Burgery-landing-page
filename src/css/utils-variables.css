@@ -129,6 +129,13 @@
 }
 
 /* ============ utilities =========== */
+/* container */
+.section-container {
+  max-width: 75rem;
+  margin: var(--spacing-3xl) auto;
+  padding-inline: var(--spacing-2xl);
+}
+
 /* width */
 .w-100 {
   width: 100%;
@@ -514,6 +521,9 @@ d.block {
 
 .place-items-center {
   place-items: center;
+}
+.place-items-end {
+  place-items: end;
 }
 
 .place-content-start {

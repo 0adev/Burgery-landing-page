@@ -6,17 +6,25 @@
   padding-inline: var(--spacing-2xl);
 }
 
+.blog-page .news {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
 .blog-page .blog {
+  background-color: #0000;
+  backdrop-filter: blur(20px);
   border: var(--border-width-sm) solid var(--cl-dark);
   border-radius: calc(var(--border-radius) * 2);
   padding: var(--spacing-lg);
   cursor: var(--cursor-pointer);
+  max-width: 23rem;
+  width: 100%;
+  height: 30rem;
 }
 
 .blog-page .blog img {
   aspect-ratio: 1.5 / 1;
   object-fit: cover;
-  border-radius: var(--border-radius);
   transition: var(--transition-fast);
 }
 
@@ -29,7 +37,81 @@
   rotate: 45deg;
 }
 
+/* ===== blog one ====== */
+
+.blog-one .blog-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  place-items: start;
+}
+
+.blog-one .blog-content > .table {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  padding: var(--spacing-lg);
+  display: grid;
+  gap: var(--gap-md);
+  border-radius: calc(var(--border-radius) * 3);
+  border: var(--border-width-sm) solid var(--cl-dark-100);
+  position: sticky;
+  top: 18rem;
+}
+
+.blog-one .blog-content > .table h3 {
+  font-size: var(--fs-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--cl-neutral-600);
+}
+
+.blog-one .blog-content .table-list {
+  display: grid;
+  gap: var(--fs-sm);
+  color: var(--cl-neutral);
+}
+
+.blog-one .blog-content .table-list a:active {
+  color: var(--cl-dark-100);
+}
+
+.blog-one .blog-content > .content img {
+  border-radius: calc(var(--border-radius) * 3);
+  aspect-ratio: 1.6 / 1;
+  object-fit: cover;
+}
+
 /* hovering styles */
 .blog-page .blog:hover a {
   color: var(--cl-primary);
+}
+
+/* media queries */
+@media (max-width: 970px) {
+  .blog-one .blog-content {
+    display: grid;
+    grid-template-columns: initial;
+    place-items: start;
+  }
+  .blog-one .blog-content .table {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .blog-one .article .section-heading {
+    text-align: left;
+    place-items: start;
+  }
+  .blog-one .article .heading {
+    text-wrap: wrap;
+    font-size: var(--fs-3xl);
+  }
+  .blog-one .article .blog-date > * {
+    font-size: var(--fs-sm);
+  }
+  .blog-one .article h2 {
+    font-size: var(--fs-lg);
+  }
+  .blog-one .article p {
+    font-size: var(--fs-md);
+  }
 }

@@ -172,5 +172,5 @@ categoryItems.forEach((item) => {
 
 // == Event listener ==
 hamburgerMenu.addEventListener("click", toggleMenu);
-window.addEventListener("scroll", showBackToTopButton);
-backToTopButton.addEventListener("click", backToTop);
+// window.addEventListener("scroll", showBackToTopButton);
+// backToTopButton.addEventListener("click", backToTop);
