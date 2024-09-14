@@ -89,4 +89,7 @@ textarea:not([rows]) {
 
 :target {
   scroll-margin-block: 20ex;
+  background-color: rgba(206, 159, 73, 0.098);
+  margin-left: var(--spacing-sm);
+  transition: var(--transition-fast);
 }
