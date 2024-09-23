@@ -55,7 +55,7 @@
   --fs-9xl: 3.875rem;
   --fs-primary-heading: clamp(3rem, 8vw, calc(var(--fs-8xl) * 2));
   --fs-secondary-heading: clamp(var(--fs-4xl), 8vw, calc(var(--fs-8xl)));
-  --section-heading-fs: clamp(var(--fs-lg), 8vw, calc(var(--fs-2xl)));
+  --section-heading-fs: clamp(var(--fs-lg), 8vw, var(--fs-2xl));
 
   /* Font Weights */
   --font-weight-light: 300;
@@ -136,7 +136,7 @@
   padding-inline: var(--spacing-2xl);
 }
 
-/* width */
+/* width & height */
 .w-100 {
   width: 100%;
 }
@@ -145,6 +145,9 @@
 }
 .w-fit-content {
   width: fit-content;
+}
+.h-initial {
+  height: 100%;
 }
 
 /* Background Colors */
@@ -179,6 +182,9 @@
 }
 .text-neutral-600 {
   color: var(--cl-neutral-600);
+}
+.text-danger {
+  color: var(--cl-danger);
 }
 
 .heading-color {
@@ -653,3 +659,6 @@ d.block {
 }
 
 /* other */
+.rotate-135deg {
+  transform: rotate(45deg);
+}

@@ -123,7 +123,7 @@
 /* === menu section === */
 .main-container {
   width: 75rem; /* 1200px */
-  margin: calc(var(--spacing-3xl) * 2) auto;
+  margin: calc(var(--spacing-3xl) * 2) auto calc(var(--spacing-3xl) * 3);
   padding-inline: var(--spacing-lg);
 }
 

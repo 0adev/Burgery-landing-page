@@ -81,12 +81,11 @@
 }
 
 .active {
-  color: var(--cl-primary);
+  color: var(--cl-primary) !important;
 }
 
 /* ========= footer section ========= */
 footer {
-  margin-top: calc(var(--spacing-3xl) * 3);
   color: var(--cl-dark);
   background-image: url(/src/assets/images/footer-img.png);
   background-position: 600px;

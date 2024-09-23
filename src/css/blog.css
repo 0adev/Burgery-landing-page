@@ -2,6 +2,7 @@
 
 .blog-page .container {
   max-width: 75rem;
+  margin-block: calc(var(--spacing-3xl) * 1.25) calc(var(--spacing-3xl) * 3);
   margin-inline: auto;
   padding-inline: var(--spacing-2xl);
 }
@@ -39,6 +40,9 @@
 
 /* ===== blog items ====== */
 
+.blog-item {
+  margin-block: calc(var(--spacing-3xl) * 1.25) calc(var(--spacing-3xl) * 3);
+}
 .blog-item .blog-content {
   display: grid;
   grid-template-columns: 1fr 2fr;
