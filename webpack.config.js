@@ -115,6 +115,14 @@ module.exports = {
           template: `./src/pages/${name}.html`,
         })
     ),
+    // Generate HTML files for all product pages
+    ...["cheese-burger"].map(
+      (name) =>
+        new HtmlWebpackPlugin({
+          filename: `pages/product-page/${name}.html`, // Output path for product-pages
+          template: `./src/pages/product-page/${name}.html`, // Source template
+        })
+    ),
     new CopyWebpackPlugin({
       patterns: [
         { from: "src/assets", to: "assets" }, // Copy images to 'dist/images'

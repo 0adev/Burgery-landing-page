@@ -178,8 +178,8 @@ categoryItems.forEach((item) => {
 
 questions.forEach((question) => {
   function showTheAnswer() {
-    const plusIcon = question.querySelector("i"); // Icon specific to the clicked question
-    const answer = question.querySelector(".answer"); // Answer specific to the clicked question
+    const plusIcon = question.querySelector("i");
+    const answer = question.querySelector(".answer");
 
     // Toggle the visibility of the answer
     if (answer.classList.contains("d-block")) {
@@ -208,5 +208,5 @@ questions.forEach((question) => {
 
 // == Event listener ==
 hamburgerMenu.addEventListener("click", toggleMenu);
-window.addEventListener("scroll", showBackToTopButton);
-backToTopButton.addEventListener("click", backToTop);
+// window.addEventListener("scroll", showBackToTopButton);
+// backToTopButton.addEventListener("click", backToTop);

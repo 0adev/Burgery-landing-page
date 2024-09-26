@@ -1,0 +1,106 @@
+.product-page {
+  max-width: 80rem;
+  margin: var(--spacing-2xl) auto;
+  padding-inline: var(--spacing-xl);
+  display: grid;
+  gap: var(--gap-2xl);
+}
+
+.product-page > .container {
+  width: 100%;
+  grid-template-columns: 2fr 1fr;
+  place-items: center;
+}
+
+.product-page .more-images img {
+  background-color: var(--cl-secondary-50);
+  width: 10rem;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  border: var(--border-width-sm) solid var(--cl-dark-100);
+}
+
+.product-page .main-image {
+  background-color: var(--cl-secondary-50);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  border: var(--border-width-sm) solid var(--cl-dark-100);
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.product-page .main-image img {
+  width: 35rem;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+.product-page .burger-info {
+  margin-block: var(--spacing-md);
+}
+
+.product-page .burger-info .price span {
+  color: var(--cl-neutral-300);
+  text-decoration: line-through;
+}
+
+.product-page .burger-info #quantity-input {
+  padding: var(--spacing-md);
+  border: none;
+  outline: var(--border-width-sm) solid var(--cl-dark-100);
+  width: 8rem;
+  background-color: var(--cl-secondary-50);
+}
+
+.product-page .burger-info .add-to-cart-btn {
+  border: none;
+  transition: var(--transition-fast);
+}
+
+.product-page .burger-info .nutritional-info li {
+  list-style-position: inside;
+}
+
+/* hovering styles */
+
+.product-page .burger-info .add-to-cart-btn:hover {
+  background-color: var(--cl-primary-100);
+  color: var(--cl-neutral-600);
+  outline: var(--border-width-sm) solid var(--cl-dark-100);
+}
+
+/* media queries */
+@media (max-width: 1150px) {
+  .product-page > .container {
+    grid-template-columns: initial;
+    grid-auto-flow: row;
+    place-items: center;
+  }
+
+  .product-page .burger-info .description {
+    max-width: 75ch;
+    width: 100%;
+  }
+}
+
+@media (max-width: 788px) {
+  .product-page .burger-image {
+    flex-wrap: wrap;
+  }
+  .product-page .burger-image .more-images {
+    order: 2;
+    grid-auto-flow: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-page {
+    margin-block: var(--spacing-md);
+    gap: var(--gap-md);
+  }
+  .product-page .burger-info .description {
+    text-wrap: wrap;
+  }
+}

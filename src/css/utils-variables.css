@@ -186,6 +186,10 @@
 .text-danger {
   color: var(--cl-danger);
 }
+.text-yellow {
+  color: var(--cl-secondary-600);
+  filter: drop-shadow(0.05rem 0 0 var(--cl-dark-100));
+}
 
 .heading-color {
   color: var(--cl-neutral);
