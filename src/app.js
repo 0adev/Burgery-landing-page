@@ -15,7 +15,7 @@ AOS.init({
   mirror: false,
 });
 
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper(".primarySwiper", {
   slidesPerView: 1,
   spaceBetween: 20,
   freeMode: false,
@@ -45,6 +45,25 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
+var galleryThumbs = new Swiper(".galleryThumbs", {
+  loop: true,
+  spaceBetween: 30,
+  slidesPerView: 4,
+  freeMode: true,
+  watchSlidesProgress: true,
+});
+var galleryTop = new Swiper(".galleryTop", {
+  loop: true,
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: galleryThumbs,
+  },
+});
+
 // == DOM Init ==
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const menuList = document.querySelector(".nav-menu");
@@ -54,10 +73,14 @@ const categoryItems = document.querySelectorAll(".category .item");
 const menuCards = document.querySelectorAll(".menu-cards .card");
 // contact page > faqs
 const questions = document.querySelectorAll(".question");
+// product page
+const burgerGallery = document.querySelector(".burger-gallery");
+const closeGalleryBtn = document.querySelector(".close-button");
+const burgerPageBody = document.querySelector("#burger-page-body");
+const burgerImages = document.querySelectorAll(".burger-image img");
 
 const currentPage = window.location.pathname;
-
-// Highlight active link
+// == Highlight active link ==
 function highlightActiveLink() {
   const links = document.querySelectorAll(".nav-menu li a");
 
@@ -77,8 +100,6 @@ highlightActiveLink();
 let isThrottled = false;
 
 function toggleMenu() {
-  console.log(hamburgerMenu);
-  console.log(menuList);
   if (isThrottled) return; // Prevent rapid clicks
   isThrottled = true;
 
@@ -170,7 +191,6 @@ categoryItems.forEach((item) => {
     this.classList.add("active");
 
     filterCards(selectedCategory);
-    console.log(item);
   });
 });
 
@@ -206,7 +226,23 @@ questions.forEach((question) => {
   question.addEventListener("click", showTheAnswer);
 });
 
+// == Burger page ==
+
+function toggleGallery(show) {
+  burgerGallery.classList.toggle("d-grid", show);
+  burgerGallery.classList.toggle("d-none", !show);
+  burgerPageBody.classList.toggle("o-hidden", show);
+
+  if (show) {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+}
+
 // == Event listener ==
 hamburgerMenu.addEventListener("click", toggleMenu);
-// window.addEventListener("scroll", showBackToTopButton);
-// backToTopButton.addEventListener("click", backToTop);
+window.addEventListener("scroll", showBackToTopButton);
+backToTopButton.addEventListener("click", backToTop);
+burgerImages.forEach((image) =>
+  image.addEventListener("click", () => toggleGallery(true))
+);
+closeGalleryBtn.addEventListener("click", () => toggleGallery(false));

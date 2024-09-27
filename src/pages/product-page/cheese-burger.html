@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" />
     <link rel="stylesheet" href="/assets/fontawesome/css/fontawesome.min.css" />
   </head>
-  <body>
+  <body class="relative" id="burger-page-body">
     <!-- header -->
     <header class="header" data-aos="fade-down">
       <nav class="navbar | d-flex justify-content-between align-items-center">
@@ -71,119 +71,174 @@
     <!-- header end -->
 
     <section class="product-page">
-      <div
-        class="secondary-navbar d-flex justify-content-start align-items-center gap-sm"
-      >
-        <div class="home">
-          <a
-            href="/index.html"
-            class="fs-md fw-medium text-primary-100 text-deco-none"
-            >Home</a
-          >
-          >
-        </div>
-        <div class="menu">
-          <a
-            href="../menu.html"
-            class="fs-md fw-medium text-primary-100 text-deco-none"
-            >Menu</a
-          >
-          >
-        </div>
+      <!-- back to top button -->
+      <a href="#" class="back-to-top-btn">
+        <img
+          src="/assets/images/arrow-up-circle.svg"
+          alt="arrow-up"
+          width="50"
+        />
+      </a>
+      <div class="wrapper">
         <div
-          class="burger-page-link fs-md fw-medium text-secondary text-deco-none"
+          class="secondary-navbar d-flex justify-content-start align-items-center gap-sm"
+          data-aos="fade-right"
         >
-          BGY Cheese Burger
-        </div>
-      </div>
-      <div class="container d-grid gap-md">
-        <div
-          class="burger-image d-flex justify-content-start align-items-start gap-lg"
-        >
-          <div class="more-images d-grid gap-md">
-            <img
-              src="/assets/images/burger-image-10.png"
-              alt=""
-              class="cursor-pointer"
-            />
-            <img
-              src="/assets/images/burger-image-10.png"
-              alt=""
-              class="cursor-pointer"
-            />
-            <img
-              src="/assets/images/burger-image-10.png"
-              alt=""
-              class="cursor-pointer"
-            />
-            <img
-              src="/assets/images/burger-image-10.png"
-              alt=""
-              class="cursor-pointer"
-            />
+          <div class="home">
+            <a
+              href="/index.html"
+              class="fs-md fw-medium text-primary-100 text-deco-none"
+              >Home</a
+            >
+            >
           </div>
-          <div class="main-image cursor-pointer">
-            <img src="/assets/images/burger-image-10.png" alt="" width="300" />
+          <div class="menu">
+            <a
+              href="../menu.html"
+              class="fs-md fw-medium text-primary-100 text-deco-none"
+              >Menu</a
+            >
+            >
           </div>
-        </div>
-        <div class="burger-info d-grid gap-md">
           <div
-            class="price d-flex align-items-center gap-md fs-4xl fw-semibold text-secondary"
+            class="burger-page-link fs-md fw-medium text-secondary text-deco-none"
           >
-            18.99$ <span>24.99$</span>
-          </div>
-          <div class="rating d-flex gap-sm text-yellow">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-          </div>
-          <div class="name text-neutral-600 fs-4xl fw-semibold">
             BGY Cheese Burger
           </div>
+        </div>
+        <div class="container d-grid gap-md">
           <div
-            class="description fs-md fw-medium text-primary-100 text-balance"
+            class="burger-image d-flex justify-content-start align-items-start gap-lg"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione id
-            cumque maxime est omnis asperiores ipsum possimus at aliquid
-            excepturi, cum, quod culpa nulla dolor magni magnam culpa modi esse.
+            <div class="more-images d-grid gap-md" data-aos="fade-right">
+              <img
+                src="/assets/images/burger-image-10.png"
+                alt=""
+                class="cursor-pointer"
+              />
+              <img
+                src="/assets/images/burger-image-10.png"
+                alt=""
+                class="cursor-pointer"
+              />
+              <img
+                src="/assets/images/burger-image-10.png"
+                alt=""
+                class="cursor-pointer"
+              />
+              <img
+                src="/assets/images/burger-image-10.png"
+                alt=""
+                class="cursor-pointer"
+              />
+            </div>
+            <div class="main-image cursor-pointer" data-aos="zoom-in">
+              <img
+                src="/assets/images/burger-image-10.png"
+                alt=""
+                width="300"
+              />
+            </div>
           </div>
-          <div
-            class="buttons d-flex gap-sm align-items-center justify-content-start mt-sm"
-          >
-            <input
-              type="number"
-              id="quantity-input"
-              inputmode="numeric"
-              min="1"
-              value="1"
-              class="border-radius"
-            />
-            <button
-              class="add-to-cart-btn bg-primary text-light fs-md fw-medium p-md border-radius cursor-pointer"
+          <div class="burger-info d-grid gap-md" data-aos="fade-left">
+            <div
+              class="price d-flex align-items-center gap-md fs-4xl fw-semibold text-secondary"
             >
-              Add To Cart
-            </button>
-          </div>
-          <div class="nutritional-info mt-sm">
-            <h3 class="fs-md fw-semibold text-neutral-600">
-              Nutritional Information :
-            </h3>
-            <ul class="pt-sm d-grid gap-sm">
-              <li class="fs-sm text-neutral-600">
-                <strong class="text-neutral-600">Calories:</strong> 540 kcal
-              </li>
-              <li class="fs-sm text-neutral-600">
-                <strong class="text-neutral-600">Protein:</strong> 25g
-              </li>
-              <li class="fs-sm text-neutral-600">
-                <strong class="text-neutral-600">Fat:</strong> 32g
-              </li>
-            </ul>
+              18.99$ <span>24.99$</span>
+            </div>
+            <div class="rating d-flex gap-sm text-yellow">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="name text-neutral-600 fs-4xl fw-semibold">
+              BGY Cheese Burger
+            </div>
+            <div
+              class="description fs-md fw-medium text-primary-100 text-balance"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+              id cumque maxime est omnis asperiores ipsum possimus at aliquid
+              excepturi, cum, quod culpa nulla dolor magni magnam culpa modi
+              esse.
+            </div>
+            <div
+              class="buttons d-flex gap-sm align-items-center justify-content-start mt-sm"
+            >
+              <input
+                type="number"
+                id="quantity-input"
+                inputmode="numeric"
+                min="1"
+                value="1"
+                class="border-radius"
+              />
+              <button
+                class="add-to-cart-btn bg-primary text-light fs-md fw-medium p-md border-radius cursor-pointer"
+              >
+                Add To Cart
+              </button>
+            </div>
+            <div class="nutritional-info mt-sm">
+              <h3 class="fs-md fw-semibold text-neutral-600">
+                Nutritional Information :
+              </h3>
+              <ul class="pt-sm d-grid gap-sm">
+                <li class="fs-sm text-neutral-600">
+                  <strong class="text-neutral-600">Calories:</strong> 540 kcal
+                </li>
+                <li class="fs-sm text-neutral-600">
+                  <strong class="text-neutral-600">Protein:</strong> 25g
+                </li>
+                <li class="fs-sm text-neutral-600">
+                  <strong class="text-neutral-600">Fat:</strong> 32g
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- Swiper -->
+    <div class="burger-gallery relative d-none">
+      <button class="close-button cursor-pointer">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="swiper galleryTop mask-image">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="/assets/images/burger-image-10.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/burger-image-10.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/burger-image-10.png" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="/assets/images/burger-image-10.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div thumbSlider="" class="swiper galleryThumbs">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide cursor-pointer">
+            <img src="/assets/images/burger-image-10.png" alt="" />
+          </div>
+          <div class="swiper-slide cursor-pointer">
+            <img src="/assets/images/burger-image-10.png" alt="" />
+          </div>
+          <div class="swiper-slide cursor-pointer">
+            <img src="/assets/images/burger-image-10.png" alt="" />
+          </div>
+          <div class="swiper-slide cursor-pointer">
+            <img src="/assets/images/burger-image-10.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

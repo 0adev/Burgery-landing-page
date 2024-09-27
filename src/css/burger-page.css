@@ -1,12 +1,13 @@
-.product-page {
-  max-width: 80rem;
+.product-page > .wrapper {
+  max-width: 85rem;
   margin: var(--spacing-2xl) auto;
   padding-inline: var(--spacing-xl);
   display: grid;
   gap: var(--gap-2xl);
+  position: relative;
 }
 
-.product-page > .container {
+.product-page .wrapper > .container {
   width: 100%;
   grid-template-columns: 2fr 1fr;
   place-items: center;
@@ -63,6 +64,63 @@
   list-style-position: inside;
 }
 
+.burger-gallery {
+  place-items: center;
+  background-color: #0707078f;
+  backdrop-filter: blur(50px);
+  width: 100%;
+  height: 100vh;
+  min-height: 100dvh;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  padding: var(--spacing-lg);
+}
+
+.burger-gallery .close-button {
+  position: absolute;
+  top: 2rem;
+  right: 10rem;
+  font-size: var(--fs-2xl);
+  color: var(--cl-secondary-600);
+  border: none;
+  background-color: transparent;
+  z-index: 9999;
+}
+
+.burger-gallery .galleryTop {
+  width: 28rem;
+  aspect-ratio: 1;
+  object-fit: contain;
+  cursor: grab;
+}
+
+.burger-gallery .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.burger-gallery .galleryThumbs {
+  max-width: 40rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.burger-gallery .galleryThumbs .swiper-slide img {
+  width: 10rem;
+  aspect-ratio: 1;
+  object-fit: contain;
+  opacity: 0.4;
+  border: var(--border-width-sm) solid var(--cl-dark-100);
+  border-radius: var(--border-radius);
+  background-color: var(--cl-secondary-50);
+}
+
+.burger-gallery .galleryThumbs .swiper-slide-thumb-active img {
+  opacity: 1;
+}
+
 /* hovering styles */
 
 .product-page .burger-info .add-to-cart-btn:hover {
@@ -73,7 +131,7 @@
 
 /* media queries */
 @media (max-width: 1150px) {
-  .product-page > .container {
+  .product-page .wrapper > .container {
     grid-template-columns: initial;
     grid-auto-flow: row;
     place-items: center;
@@ -82,6 +140,14 @@
   .product-page .burger-info .description {
     max-width: 75ch;
     width: 100%;
+  }
+
+  .burger-gallery .close-button {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: var(--fs-2xl);
+    color: var(--cl-secondary-600);
   }
 }
 
@@ -96,7 +162,7 @@
 }
 
 @media (max-width: 600px) {
-  .product-page {
+  .product-page .wrapper {
     margin-block: var(--spacing-md);
     gap: var(--gap-md);
   }

@@ -116,7 +116,15 @@ module.exports = {
         })
     ),
     // Generate HTML files for all product pages
-    ...["cheese-burger"].map(
+    ...[
+      "angus.beef",
+      "bbq-ranch",
+      "bgy-chicken",
+      "bgy-heaven",
+      "bgy-veggie-delight",
+      "cheese-burger",
+      "pesto-turkey",
+    ].map(
       (name) =>
         new HtmlWebpackPlugin({
           filename: `pages/product-page/${name}.html`, // Output path for product-pages
