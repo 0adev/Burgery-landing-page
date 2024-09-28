@@ -131,83 +131,6 @@
   gap: calc(var(--gap-sm) / 2);
 }
 
-.main-container .menu-section .card .card-img::after {
-  content: "";
-  width: calc(100% - 20%);
-  height: 2rem;
-  border-radius: 100%;
-  background-color: rgba(0, 0, 0, 0.447);
-  filter: blur(12px);
-  position: absolute;
-  z-index: -1;
-}
-
-.main-container .menu-section .first-card .card-img::after {
-  bottom: 0.875rem;
-  left: 1.25rem;
-}
-.main-container .menu-section .second-card .card-img::after {
-  bottom: -0.25rem;
-  left: 1.25rem;
-}
-.main-container .menu-section .third-card .card-img::after {
-  bottom: 0.5rem;
-  left: 1rem;
-}
-.main-container .menu-section .fourth-card .card-img::after {
-  bottom: 1.5rem;
-  left: 1.5rem;
-}
-.main-container .menu-section .fifth-card .card-img::after {
-  bottom: 1.25rem;
-  left: 1.25rem;
-}
-
-.main-container .menu-section .card img {
-  width: 16rem;
-  aspect-ratio: 2 / 2;
-  object-fit: contain;
-  transition: var(--transition-base);
-}
-
-.main-container .menu-section .description {
-  width: 25ch; /* Adjust width as needed */
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-wrap: balance;
-  text-align: center;
-}
-
-.main-container .menu-section .card .reviews i {
-  color: var(--cl-warning);
-}
-
-.main-container .menu-section .card .cart a {
-  padding: var(--spacing-sm) var(--spacing-md);
-}
-
-/* slider-controls */
-.main-container .menu-section .button-next {
-  position: absolute;
-  right: 0;
-  top: 60%;
-  z-index: var(--z-index-99);
-  font-size: var(--fs-3xl);
-  color: var(--cl-primary-300);
-  cursor: var(--cursor-pointer);
-}
-
-.main-container .menu-section .button-prev {
-  position: absolute;
-  left: 0;
-  top: 60%;
-  z-index: var(--z-index-99);
-  font-size: var(--fs-3xl);
-  color: var(--cl-primary-300);
-  cursor: var(--cursor-pointer);
-}
-
 /* === features section === */
 .main-container .features-section {
   margin-block: 10rem;
@@ -358,11 +281,6 @@
 
 .hero-section .card:hover img {
   transform: scale(1.1) rotate(15deg);
-}
-
-.main-container .menu-section .addtocart-btn:hover {
-  background-color: var(--cl-primary);
-  color: var(--cl-light);
 }
 
 .main-container .blog-section .description a:hover {

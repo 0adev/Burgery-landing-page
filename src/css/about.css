@@ -74,15 +74,6 @@
   right: -6rem;
 }
 
-/* promo section */
-.about-us .promo-section {
-  margin-block-end: 10rem;
-}
-
-.about-us .promo-section img {
-  width: 4rem;
-}
-
 /* team section */
 .about-us .team-section {
   margin-block-end: 10rem;

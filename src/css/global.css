@@ -84,6 +84,100 @@
   color: var(--cl-primary) !important;
 }
 
+/* menu section */
+.menu-section .card .card-img::after {
+  content: "";
+  width: calc(100% - 20%);
+  height: 2rem;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.447);
+  filter: blur(12px);
+  position: absolute;
+  z-index: -1;
+}
+
+.menu-section .first-card .card-img::after {
+  bottom: 0.875rem;
+  left: 1.25rem;
+}
+.menu-section .second-card .card-img::after {
+  bottom: -0.25rem;
+  left: 1.25rem;
+}
+.menu-section .third-card .card-img::after {
+  bottom: 0.5rem;
+  left: 1rem;
+}
+.menu-section .fourth-card .card-img::after {
+  bottom: 1.5rem;
+  left: 1.5rem;
+}
+.menu-section .fifth-card .card-img::after {
+  bottom: 1.25rem;
+  left: 1.25rem;
+}
+
+.menu-section .card img {
+  width: 16rem;
+  aspect-ratio: 2 / 2;
+  object-fit: contain;
+  transition: var(--transition-base);
+}
+
+.menu-section .description {
+  width: 25ch; /* Adjust width as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: balance;
+  text-align: center;
+}
+
+.menu-section .card .reviews i {
+  color: var(--cl-warning);
+}
+
+.menu-section .card .cart a {
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+/* slider-controls */
+.menu-section .button-next {
+  position: absolute;
+  right: 0;
+  top: 60%;
+  z-index: var(--z-index-99);
+  font-size: var(--fs-3xl);
+  color: var(--cl-primary-300);
+  cursor: var(--cursor-pointer);
+}
+
+.menu-section .button-prev {
+  position: absolute;
+  left: 0;
+  top: 60%;
+  z-index: var(--z-index-99);
+  font-size: var(--fs-3xl);
+  color: var(--cl-primary-300);
+  cursor: var(--cursor-pointer);
+}
+
+.menu-section .addtocart-btn:hover {
+  background-color: var(--cl-primary);
+  color: var(--cl-light);
+}
+
+/* ======= promo section ========= */
+.promo-section {
+  margin-block-end: 10rem;
+}
+
+.promo-section img {
+  width: 5rem;
+  border: var(--border-width-sm) solid var(--cl-dark);
+  border-radius: var(--border-radius-circle);
+}
+
 /* ========= footer section ========= */
 footer {
   color: var(--cl-dark);

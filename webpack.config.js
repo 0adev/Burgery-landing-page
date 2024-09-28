@@ -124,6 +124,7 @@ module.exports = {
       "bgy-veggie-delight",
       "cheese-burger",
       "pesto-turkey",
+      "pesto-turkey-2",
     ].map(
       (name) =>
         new HtmlWebpackPlugin({

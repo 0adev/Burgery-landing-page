@@ -51,6 +51,16 @@ var galleryThumbs = new Swiper(".galleryThumbs", {
   slidesPerView: 4,
   freeMode: true,
   watchSlidesProgress: true,
+  breakpoints: {
+    400: {
+      spaceBetween: 30,
+      slidesPerView: 3,
+    },
+    1440: {
+      spaceBetween: 30,
+      slidesPerView: 4,
+    },
+  },
 });
 var galleryTop = new Swiper(".galleryTop", {
   loop: true,
@@ -228,21 +238,25 @@ questions.forEach((question) => {
 
 // == Burger page ==
 
-function toggleGallery(show) {
-  burgerGallery.classList.toggle("d-grid", show);
-  burgerGallery.classList.toggle("d-none", !show);
-  burgerPageBody.classList.toggle("o-hidden", show);
+function burgerGalleryHandling() {
+  function toggleGallery(show) {
+    burgerGallery.classList.toggle("d-grid", show);
+    burgerGallery.classList.toggle("d-none", !show);
+    burgerPageBody.classList.toggle("o-hidden", show);
 
-  if (show) {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (show) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      closeGalleryBtn.addEventListener("click", () => toggleGallery(false));
+    }
   }
+
+  burgerImages.forEach((image) =>
+    image.addEventListener("click", () => toggleGallery(true))
+  );
 }
 
 // == Event listener ==
 hamburgerMenu.addEventListener("click", toggleMenu);
 window.addEventListener("scroll", showBackToTopButton);
 backToTopButton.addEventListener("click", backToTop);
-burgerImages.forEach((image) =>
-  image.addEventListener("click", () => toggleGallery(true))
-);
-closeGalleryBtn.addEventListener("click", () => toggleGallery(false));
+window.addEventListener("DOMContentLoaded", burgerGalleryHandling);

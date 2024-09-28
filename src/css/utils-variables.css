@@ -450,6 +450,9 @@
 .mb-xl {
   margin-bottom: var(--spacing-xl);
 }
+.mb-3xl {
+  margin-bottom: var(--spacing-3xl);
+}
 
 .ml-xs {
   margin-left: var(--spacing-xs);
