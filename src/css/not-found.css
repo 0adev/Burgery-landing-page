@@ -1,0 +1,101 @@
+.not-found-section > .wrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+.not-found-section > .wrapper > img {
+  width: 12rem;
+  position: absolute;
+  z-index: -1;
+}
+.not-found-section > .wrapper > img:first-of-type {
+  top: 5%;
+  left: 10%;
+  rotate: 45deg;
+}
+.not-found-section > .wrapper > img:last-of-type {
+  right: 10%;
+  bottom: 5%;
+  rotate: -135deg;
+}
+
+.not-found-section .container {
+  width: 100%;
+  height: calc(100vh - 20vh);
+  min-height: 36rem;
+  display: grid;
+  place-content: center;
+}
+
+.not-found-section .number {
+  font-size: 12rem;
+  line-height: 1;
+}
+.not-found-section .number:first-of-type {
+  margin-right: -2.875rem;
+}
+.not-found-section .number:last-of-type {
+  margin-left: -2.875rem;
+}
+
+.not-found-section .image {
+  width: 16rem;
+  z-index: 1;
+}
+
+.not-found-section .description p:first-of-type {
+  font-size: clamp(var(--fs-xl), 4vw, var(--fs-4xl));
+}
+.not-found-section .description p:last-of-type {
+  font-size: clamp(var(--fs-md), 4vw, var(--fs-2xl));
+}
+
+.not-found-section .links a {
+  border: var(--border-width-sm) solid var(--cl-dark);
+  padding: var(--spacing-md);
+  background-color: var(--cl-secondary-600);
+  color: var(--cl-dark);
+  font-size: var(--fs-md);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+/* hovering styles */
+.not-found-section .links a:hover {
+  background-color: var(--cl-dark);
+  color: var(--cl-light);
+}
+
+@media (max-width: 810px) {
+  .not-found-section > .wrapper > img:first-of-type {
+    top: 10%;
+    left: 5%;
+    rotate: -135deg;
+  }
+  .not-found-section > .wrapper > img:last-of-type {
+    right: 5%;
+    bottom: 0;
+    rotate: 45deg;
+  }
+}
+
+@media (max-width: 500px) {
+  .not-found-section .number {
+    font-size: 10rem;
+  }
+
+  .not-found-section .image {
+    width: 13rem;
+  }
+
+  .not-found-section > .wrapper > img:first-of-type {
+    top: 5%;
+    left: 0;
+    rotate: -135deg;
+  }
+  .not-found-section > .wrapper > img:last-of-type {
+    right: 0;
+    bottom: 0;
+    rotate: 45deg;
+  }
+}
