@@ -1,0 +1,47 @@
+.privacy-policy {
+  max-width: 65rem;
+  margin: var(--spacing-3xl) auto;
+  padding-inline: var(--spacing-md);
+}
+
+.privacy-policy .container > div,
+.privacy-policy .container > * > div {
+  display: grid;
+  gap: var(--gap-xl);
+}
+
+.privacy-policy :where(h1, h2, h3, h4) {
+  font-weight: var(--font-weight-semibold);
+}
+.privacy-policy :where(p, li, span) {
+  font-size: var(--fs-md);
+  font-weight: var(--font-weight-medium);
+}
+
+.privacy-policy h1 {
+  font-size: var(--fs-8xl);
+}
+.privacy-policy h2 {
+  font-size: var(--fs-4xl);
+}
+.privacy-policy h3 {
+  font-size: var(--fs-2xl);
+}
+.privacy-policy h4 {
+  font-size: var(--fs-xl);
+}
+
+.privacy-policy :where(p, li) {
+  text-wrap: balance;
+}
+
+.privacy-policy ul {
+  display: grid;
+  gap: var(--gap-lr);
+  list-style-position: inside;
+  padding-left: var(--spacing-md);
+}
+
+.privacy-policy ul span {
+  font-weight: var(--font-weight-bold);
+}

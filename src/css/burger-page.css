@@ -68,7 +68,7 @@
   backdrop-filter: blur(50px);
   background-color: #0707078f;
   height: 100vh;
-  min-height: 100dvh;
+  min-height: 40rem;
   padding: var(--spacing-lg);
   place-items: center;
   position: absolute;
