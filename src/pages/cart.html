@@ -10,7 +10,7 @@
     />
     <link
       rel="shortcut icon"
-      href="/assets/images/favicon.svg"
+      href="../assets/images/favicon.svg"
       type="image/x-icon"
     />
     <!-- google fonts -->
@@ -21,17 +21,20 @@
       rel="stylesheet"
     />
     <!-- font awesome -->
-    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="/assets/fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/fontawesome/css/fontawesome.min.css"
+    />
   </head>
-  <body class="relative" id="burger-page-body">
+  <body>
     <!-- header -->
     <header class="header" data-aos="fade-down">
       <nav class="navbar | d-flex justify-content-between align-items-center">
         <div class="logo">
-          <a href="/index.html">
+          <a href="../index.html">
             <img
-              src="/assets/images/logo.svg"
+              src="../assets/images/logo.svg"
               alt="logo svg that contains a burger logo with brand name of BURGERY"
             />
           </a>
@@ -42,24 +45,24 @@
             class="navbar-nav | d-flex justify-content-center align-items-start"
             role="list"
           >
-            <li role="listitem"><a href="/index.html">Home</a></li>
-            <li role="listitem"><a href="../menu.html">Menu</a></li>
-            <li role="listitem"><a href="../blog.html">Blog</a></li>
+            <li role="listitem"><a href="../index.html">Home</a></li>
+            <li role="listitem"><a href="./menu.html">Menu</a></li>
+            <li role="listitem"><a href="./blog.html">Blog</a></li>
             <li role="listitem">
-              <a href="../about.html">About Us</a>
+              <a href="./about.html">About Us</a>
             </li>
             <li role="listitem">
-              <a href="../contact.html">Contact</a>
+              <a href="./contact.html">Contact</a>
             </li>
             <li role="listitem" class="d-none">
-              <a href="../cart.html">Cart</a>
+              <a href="./cart.html">Cart</a>
             </li>
           </ul>
         </div>
 
         <div class="shopping-cart">
           <a
-            href="../cart.html"
+            href="./cart.html"
             class="shopping-cart-btn bg-primary-100 fs-sm fw-semibold border-none border-radius d-flex align-items-center cursor-pointer text-secondary"
           >
             <i class="fa-solid fa-bag-shopping"></i>
@@ -73,185 +76,220 @@
       </nav>
     </header>
     <!-- header end -->
-
-    <section class="product-page">
+    <!-- section start -->
+    <section class="shopping-cart-section">
       <!-- back to top button -->
       <a href="#" class="back-to-top-btn">
         <img
-          src="/assets/images/arrow-up-circle.svg"
+          src="../assets/images/arrow-up-circle.svg"
           alt="arrow-up"
           width="50"
         />
       </a>
-      <div class="wrapper o-hidden">
-        <div
-          class="secondary-navbar d-flex justify-content-start align-items-center gap-sm w-fit-content"
-          data-aos="fade-right"
+      <div class="container d-grid gap-2xl">
+        <h1
+          class="primary-heading ff-secondary fs-2xl fw-semibold text-primary text-center"
+          data-aos="zoom-in"
         >
-          <div class="home">
-            <a
-              href="/index.html"
-              class="fs-md fw-medium text-primary-100 text-deco-none"
-              >Home</a
-            >
-            >
-          </div>
-          <div class="menu">
-            <a
-              href="../menu.html"
-              class="fs-md fw-medium text-primary-100 text-deco-none"
-              >Menu</a
-            >
-            >
-          </div>
-          <div
-            class="burger-page-link fs-md fw-medium text-secondary text-deco-none"
-          >
-            Pesto Turkey Burger
-          </div>
-        </div>
-
-        <div class="container">
-          <div
-            class="burger-image d-flex justify-content-start align-items-start gap-lg w-fit-centent"
-          >
-            <div class="more-images d-grid gap-md" data-aos="fade-right">
-              <img
-                src="/assets/images/burgerImg-hero-3.png"
-                alt=""
-                class="cursor-pointer"
-              />
-              <img
-                src="/assets/images/burgerImg-hero-3.png"
-                alt=""
-                class="cursor-pointer"
-              />
-              <img
-                src="/assets/images/burgerImg-hero-3.png"
-                alt=""
-                class="cursor-pointer"
-              />
-              <img
-                src="/assets/images/burgerImg-hero-3.png"
-                alt=""
-                class="cursor-pointer"
-              />
-            </div>
-            <div class="main-image cursor-pointer" data-aos="zoom-in">
-              <img
-                src="/assets/images/burgerImg-hero-3.png"
-                alt=""
-                width="300"
-              />
-            </div>
-          </div>
-          <div class="burger-info d-grid gap-md" data-aos="fade-left">
-            <div
-              class="price d-flex align-items-center gap-md fs-4xl fw-semibold text-secondary"
-            >
-              14.99$ <span>19.99$</span>
-            </div>
-            <div class="rating d-flex gap-sm text-yellow">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <div class="name text-neutral-600 fs-4xl fw-semibold">
-              Pesto Turkey Burger
-            </div>
-            <div
-              class="description fs-md fw-medium text-primary-100 text-balance"
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-              id cumque maxime est omnis asperiores ipsum possimus at aliquid
-              excepturi, cum, quod culpa nulla dolor magni magnam culpa modi
-              esse.
-            </div>
-            <div
-              class="buttons d-flex gap-sm align-items-center justify-content-start mt-sm"
-            >
-              <input
-                type="number"
-                id="quantity-input"
-                inputmode="numeric"
-                min="1"
-                value="1"
-                class="border-radius"
-              />
-              <button
-                class="add-to-cart-btn bg-primary text-light fs-md fw-medium p-md border-radius cursor-pointer"
+          Shopping Cart
+        </h1>
+        <!--  -->
+        <div class="cart-tables">
+          <div class="product-table w-100" data-aos="fade-right">
+            <div class="product-list w-100">
+              <!-- item 1 -->
+              <div
+                class="item d-flex justity-content-start align-items-center gap-sm"
               >
-                Add To Cart
-              </button>
+                <!-- img -->
+                <div class="image">
+                  <img
+                    src="../assets/images/burger-image-10.png"
+                    alt=""
+                    width="200"
+                  />
+                </div>
+                <div class="details d-grid gap-sm w-100">
+                  <div
+                    class="info d-flex justify-content-between align-items-start gap-sm w-100"
+                  >
+                    <div class="description">
+                      <p
+                        class="item-name fs-md fw-medium text-primary line-height-loose"
+                      >
+                        BGY Cheese Burger
+                      </p>
+                      <p class="text-primary-100 fs-sm fw-medium text-balance">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit
+                        voluptate...
+                      </p>
+                    </div>
+                    <p class="price fs-lg fw-semibold text-primary">$18.99</p>
+                  </div>
+                  <div
+                    class="item-controls d-flex justify-content-between align-items-center gap-sm w-100"
+                  >
+                    <input type="number" id="quantity" value="0" min="0" />
+                    <div class="buttons d-flex align-items-center gap-sm">
+                      <button class="save-btn">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Save</span>
+                      </button>
+                      <button class="delete-btn">
+                        <i class="fa-solid fa-trash"></i>
+                        <span>Delete</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- item 2 -->
+              <div
+                class="item d-flex justity-content-start align-items-center gap-sm"
+              >
+                <!-- img -->
+                <div class="image">
+                  <img
+                    src="../assets/images/burger-image-11.png"
+                    alt=""
+                    width="200"
+                  />
+                </div>
+                <div class="details d-grid gap-sm w-100">
+                  <div
+                    class="info d-flex justify-content-between align-items-start gap-sm w-100"
+                  >
+                    <div class="description">
+                      <p
+                        class="item-name fs-md fw-medium text-primary line-height-loose"
+                      >
+                        BGY Chicken Burger
+                      </p>
+                      <p class="text-primary-100 fs-sm fw-medium text-balance">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit
+                        voluptate...
+                      </p>
+                    </div>
+                    <p class="price fs-lg fw-semibold text-primary">$17.99</p>
+                  </div>
+                  <div
+                    class="item-controls d-flex justify-content-between align-items-center gap-sm w-100"
+                  >
+                    <input type="number" id="quantity" value="0" min="0" />
+                    <div class="buttons d-flex align-items-center gap-sm">
+                      <button class="save-btn">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Save</span>
+                      </button>
+                      <button class="delete-btn">
+                        <i class="fa-solid fa-trash"></i>
+                        <span>Delete</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- item 3 -->
+              <div
+                class="item d-flex justity-content-start align-items-center gap-sm"
+              >
+                <!-- img -->
+                <div class="image">
+                  <img
+                    src="../assets/images/burger-image-13.png"
+                    alt=""
+                    width="200"
+                  />
+                </div>
+                <div class="details d-grid gap-sm w-100">
+                  <div
+                    class="info d-flex justify-content-between align-items-start gap-sm w-100"
+                  >
+                    <div class="description">
+                      <p
+                        class="item-name fs-md fw-medium text-primary line-height-loose"
+                      >
+                        Angus Beef Burger
+                      </p>
+                      <p class="text-primary-100 fs-sm fw-medium text-balance">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit
+                        voluptate...
+                      </p>
+                    </div>
+                    <p class="price fs-lg fw-semibold text-primary">$19.99</p>
+                  </div>
+                  <div
+                    class="item-controls d-flex justify-content-between align-items-center gap-sm w-100"
+                  >
+                    <input type="number" id="quantity" value="0" min="0" />
+                    <div class="buttons d-flex align-items-center gap-sm">
+                      <button class="save-btn">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Save</span>
+                      </button>
+                      <button class="delete-btn">
+                        <i class="fa-solid fa-trash"></i>
+                        <span>Delete</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="nutritional-info mt-sm">
-              <h3 class="fs-md fw-semibold text-neutral-600">
-                Nutritional Information :
-              </h3>
-              <ul class="pt-sm d-grid gap-sm">
-                <li class="fs-sm text-neutral-600">
-                  <strong class="text-neutral-600">Calories:</strong> 620 kcal
-                </li>
-                <li class="fs-sm text-neutral-600">
-                  <strong class="text-neutral-600">Protein:</strong> 28g
-                </li>
-                <li class="fs-sm text-neutral-600">
-                  <strong class="text-neutral-600">Fat:</strong> 34g
-                </li>
-              </ul>
+          </div>
+          <div class="total-price-table d-grid gap-sm" data-aos="fade-left">
+            <div class="discount d-grid gap-sm">
+              <div class="promo-code d-grid gap-md">
+                <input type="text" id="promo" placeholder="Promocode" />
+                <button>Apply</button>
+              </div>
+              <p class="note text-primary-100 fs-sm fw-normal">
+                20% of discount
+              </p>
+            </div>
+            <!-- subtotal -->
+            <div class="subtotal d-grid gap-sm pb-sm">
+              <div
+                class="header d-flex align-items-center justify-content-between gap-sm"
+              >
+                <h3 class="fs-lg fw-medium text-neutral">Subtotal</h3>
+                <p class="price text-primary fw-semibold fs-md">$80.96</p>
+              </div>
+              <div
+                class="discount-total d-flex align-items-center justify-content-between gap-sm"
+              >
+                <p class="text-primary fs-sm fw-normal">Discount</p>
+                <p class="text-primary fs-sm fw-normal">(20%) - $16.99</p>
+              </div>
+              <div
+                class="delivery-total d-flex align-items-center justify-content-between gap-sm"
+              >
+                <p class="text-primary fs-sm fw-normal">Delivery</p>
+                <p class="text-primary fs-sm fw-normal">Free - $0.00</p>
+              </div>
+            </div>
+            <!-- total -->
+            <div
+              class="total d-flex justify-content-between align-item-center gap-sm"
+            >
+              <p class="fs-lg fw-medium text-neutral">Total</p>
+              <p class="fs-lg fw-medium text-neutral">$70.99</p>
+            </div>
+            <!-- buttons -->
+            <div class="buttons d-grid gap-sm place-items-center text-center">
+              <a href="./cart.html">Proceed to checkout</a>
+              <a href="./menu.html">Continue shopping</a>
             </div>
           </div>
         </div>
-
-        <!-- promo section -->
-        <div class="promo-section">
-          <div
-            class="container section-container d-grid grid-cols-auto-fit place-items-center gap-xl"
-          >
-            <div
-              class="promo d-grid place-items-center gap-md text-center"
-              data-aos="zoom-in"
-            >
-              <img src="/assets/images/delivery-fast-svgrepo-com.svg" alt="" />
-              <h3>Fast Delivery</h3>
-              <p class="text-balance text-primary fs-md fw-medium lh-tight">
-                Get your burgers delivered hot and fresh in record time.
-              </p>
-            </div>
-            <div
-              class="promo d-grid place-items-center gap-md text-center"
-              data-aos="zoom-in"
-            >
-              <img src="/assets/images/room-service-1-svgrepo-com.svg" alt="" />
-              <h3>Quick & Convenient Service</h3>
-              <p class="text-balance text-primary fs-md fw-medium lh-tight">
-                Distinctively unleash client-base portals after cross platform
-                information.
-              </p>
-            </div>
-            <div
-              class="promo d-grid place-items-center gap-md text-center"
-              data-aos="zoom-in"
-            >
-              <img src="/assets/images/stars-star-svgrepo-com.svg" alt="" />
-              <h3>Fresh Ingredients</h3>
-              <p class="text-balance text-primary fs-md fw-medium lh-tight">
-                Distinctively unleash client-base portals after cross platform
-                information.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- promo section end -->
+        <!--  -->
         <!-- more products -->
         <div
           class="menu-section relative d-grid place-items-center gap-lg mt-3xl mb-3xl"
         >
           <!-- section heading -->
           <h2
-            class="fs-secondary-heading text-neutral-600 fw-semibold ff-secondary"
+            class="ff-secondary fs-2xl text-neutral-600 fw-semibold"
             data-aos="fade-up"
           >
             More Products
@@ -269,7 +307,7 @@
                 <div
                   class="card-img relative cursor-pointer d-grid place-items-center"
                 >
-                  <a href="#">
+                  <a href="./product-page/pesto-turkey-2.html">
                     <img
                       src="/assets/images/burgerImg-hero-3.png"
                       alt="burger image"
@@ -316,7 +354,7 @@
                 <div
                   class="card-img relative cursor-pointer d-grid place-items-center"
                 >
-                  <a href="#">
+                  <a href="./product-page/bgy-heaven.html">
                     <img
                       src="/assets/images/burgerImg-hero-2.png"
                       alt="burger image"
@@ -363,9 +401,9 @@
                 <div
                   class="card-img relative cursor-pointer d-grid place-items-center"
                 >
-                  <a href="#">
+                  <a href="./product-page/pesto-turkey.html">
                     <img
-                      src="/assets/images/burgerImg-hero-3.png"
+                      src="/assets/images/burgerImg-hero-6.png"
                       alt="burger image"
                       width="100"
                     />
@@ -410,7 +448,7 @@
                 <div
                   class="card-img relative cursor-pointer d-grid place-items-center"
                 >
-                  <a href="#">
+                  <a href="./product-page/bbq-ranch.html">
                     <img
                       src="/assets/images/burgerImg-hero-4.png"
                       alt="burger image"
@@ -457,7 +495,7 @@
                 <div
                   class="card-img relative cursor-pointer d-grid place-items-center"
                 >
-                  <a href="#">
+                  <a href="./product-page/bgy-veggie-delight.html">
                     <img
                       src="/assets/images/burgerImg-hero-5.png"
                       alt="burger image"
@@ -509,47 +547,8 @@
         </div>
         <!-- more products end -->
       </div>
-      <!-- wrapper end -->
     </section>
-    <!-- Swiper -->
-    <div class="burger-gallery relative d-none">
-      <button class="close-button cursor-pointer">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-      <div class="swiper galleryTop mask-image">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="/assets/images/burgerImg-hero-3.png" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/assets/images/burgerImg-hero-3.png" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/assets/images/burgerImg-hero-3.png" alt="" />
-          </div>
-          <div class="swiper-slide">
-            <img src="/assets/images/burgerImg-hero-3.png" alt="" />
-          </div>
-        </div>
-      </div>
-
-      <div thumbSlider="" class="swiper galleryThumbs">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide cursor-pointer">
-            <img src="/assets/images/burgerImg-hero-3.png" alt="" />
-          </div>
-          <div class="swiper-slide cursor-pointer">
-            <img src="/assets/images/burgerImg-hero-3.png" alt="" />
-          </div>
-          <div class="swiper-slide cursor-pointer">
-            <img src="/assets/images/burgerImg-hero-3.png" alt="" />
-          </div>
-          <div class="swiper-slide cursor-pointer">
-            <img src="/assets/images/burgerImg-hero-3.png" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- section end -->
     <!-- footer -->
     <footer>
       <div class="footer-container w-100 d-grid place-items-center gap-xl">
@@ -557,8 +556,8 @@
           <!-- service info -->
           <div class="service-info w-fit-content">
             <div class="logo w-fit-content">
-              <a href="/index.html">
-                <img src="/assets/images/logo.svg" alt="logo" />
+              <a href="../index.html">
+                <img src="../assets/images/logo.svg" alt="logo" />
               </a>
             </div>
             <div class="info d-grid gap-lg">
@@ -589,35 +588,35 @@
               <ul role="list">
                 <li>
                   <a
-                    href="/index.html"
+                    href="../index.html"
                     class="fw-medium fs-md text-primary text-deco-none transition-fast"
                     >Home</a
                   >
                 </li>
                 <li>
                   <a
-                    href="../menu.html"
+                    href="./menu.html"
                     class="fw-medium fs-md text-primary text-deco-none transition-fast"
                     >Menu</a
                   >
                 </li>
                 <li>
                   <a
-                    href="../blog.html"
+                    href="./blog.html"
                     class="fw-medium fs-md text-primary text-deco-none transition-fast"
                     >Blog</a
                   >
                 </li>
                 <li>
                   <a
-                    href="../about.html"
+                    href="./about.html"
                     class="fw-medium fs-md text-primary text-deco-none transition-fast"
                     >About Us</a
                   >
                 </li>
                 <li>
                   <a
-                    href="../contact.html"
+                    href="./contact.html"
                     class="fw-medium fs-md text-primary text-deco-none transition-fast"
                     >Contact</a
                   >
@@ -632,21 +631,21 @@
               <ul role="list">
                 <li>
                   <a
-                    href="../style-guide.html"
+                    href="./style-guide.html"
                     class="fw-medium fs-md text-primary text-deco-none transition-fast"
                     >Style Guide</a
                   >
                 </li>
                 <li>
                   <a
-                    href="../not-found.html"
+                    href="./not-found.html"
                     class="fw-medium fs-md text-primary text-deco-none transition-fast"
                     >Not Found</a
                   >
                 </li>
                 <li>
                   <a
-                    href="../privacy-policy.html"
+                    href="./privacy-policy.html"
                     class="fw-medium fs-md text-primary text-deco-none transition-fast"
                     >Privacy Policy</a
                   >

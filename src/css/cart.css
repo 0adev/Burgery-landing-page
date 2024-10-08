@@ -1,0 +1,153 @@
+.shopping-cart-section > .container {
+  max-width: 80rem;
+  margin: var(--spacing-3xl) auto;
+  padding-inline: var(--spacing-2xl);
+}
+
+.shopping-cart-section .primary-heading {
+  border-bottom: var(--border-width-sm) solid rgba(0, 0, 0, 0.135);
+  padding-bottom: var(--spacing-md);
+}
+
+.shopping-cart-section .cart-tables {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--gap-2xl);
+}
+
+.shopping-cart-section .product-table .description p:last-of-type {
+  max-width: 40ch;
+  width: 100%;
+}
+
+.shopping-cart-section .item-controls #quantity {
+  width: 4rem;
+  background: var(--cl-secondary-50);
+  color: var(--cl-neutral);
+  padding: var(--spacing-sm);
+  border: var(--border-width-sm) solid var(--cl-dark-100);
+  border-radius: var(--border-radius);
+  font-size: var(--fs-sm);
+  font-weight: var(--font-weight-medium);
+}
+.shopping-cart-section .item-controls .buttons > * {
+  background: var(--cl-secondary-50);
+  color: var(--cl-neutral);
+  padding: var(--spacing-sm);
+  border: var(--border-width-sm) solid var(--cl-dark-100);
+  border-radius: var(--border-radius);
+  font-size: var(--fs-sm);
+  font-weight: var(--font-weight-medium);
+  transition: var(--transition-fast);
+  cursor: var(--cursor-pointer);
+}
+
+.shopping-cart-section .total-price-table {
+  background-color: #ffffff67;
+  border: var(--border-width-sm) solid var(--cl-dark-100);
+  padding: var(--spacing-lg) var(--spacing-md);
+  width: fit-content;
+  height: 26rem;
+  margin-left: auto;
+}
+
+.shopping-cart-section .total-price-table > *:not(.buttons) {
+  border-bottom: var(--border-width-sm) dashed var(--cl-dark-100);
+}
+.shopping-cart-section .total-price-table .discount .promo-code {
+  grid-auto-flow: column;
+}
+.shopping-cart-section .total-price-table .promo-code > * {
+  background-color: #fff;
+  padding: calc(var(--spacing-sm) - 0.175em) var(--spacing-sm);
+  border: var(--border-width-sm) solid var(--cl-dark-100);
+  font-size: var(--fs-sm);
+}
+.shopping-cart-section .total-price-table .promo-code #promo::placeholder {
+  font-size: var(--fs-sm);
+  color: var(--cl-dark-100);
+}
+.shopping-cart-section .total-price-table .discount button {
+  width: fit-content;
+  font-weight: var(--font-weight-medium);
+  background: var(--cl-light);
+  color: var(--cl-neutral-600);
+  padding-inline: calc(var(--spacing-sm) + 0.375em);
+  border-radius: var(--border-radius);
+  cursor: var(--cursor-pointer);
+}
+
+.shopping-cart-section .total-price-table .discount #promo:focus,
+.shopping-cart-section .total-price-table .discount #promo:focus-within {
+  border-color: var(--cl-neutral);
+  outline: none;
+}
+
+.shopping-cart-section .total-price-table .buttons > * {
+  border: var(--border-width-sm) solid var(--border-cl-primary);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-sm);
+  width: 100%;
+  text-decoration: none;
+  font-size: var(--fs-md);
+  font-weight: var(--font-weight-medium);
+  cursor: var(--cursor-pointer);
+  transition: var(--transition-fast);
+}
+
+.shopping-cart-section .total-price-table .buttons > *:first-of-type {
+  background: var(--cl-secondary-200);
+  /* border: none; */
+}
+.shopping-cart-section .total-price-table .buttons > *:last-of-type {
+  background: var(--cl-light);
+}
+
+/* hovering styles */
+.shopping-cart-section .item-controls .buttons > *:hover {
+  color: var(--cl-danger);
+}
+.shopping-cart-section .total-price-table .buttons > *:first-of-type:hover {
+  background: var(--cl-light);
+}
+
+/* media queries */
+@media (max-width: 1000px) {
+  .shopping-cart-section .cart-tables {
+    grid-template-columns: inherit;
+  }
+  .shopping-cart-section .total-price-table {
+    width: 100%;
+    margin-left: initial;
+  }
+  .shopping-cart-section .total-price-table .discount button {
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .shopping-cart-section .product-table .description p:last-of-type {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .shopping-cart-section > .container {
+    padding-inline: var(--spacing-md);
+  }
+}
+@media (max-width: 400px) {
+  .shopping-cart-section :where(.item-name, .price) {
+    font-size: var(--fs-sm);
+  }
+  .shopping-cart-section .item-controls .buttons > * {
+    background: none;
+    color: var(--cl-neutral);
+    padding: 0;
+    border: none;
+    border-radius: initial;
+    font-size: var(--fs-md);
+  }
+  .shopping-cart-section .item-controls .buttons span {
+    display: none;
+  }
+}

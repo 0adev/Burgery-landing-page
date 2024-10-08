@@ -334,6 +334,9 @@ footer {
     font-size: var(--fs-2xl);
     font-family: var(--gluten-ff);
   }
+  .header .nav-menu li:last-of-type {
+    display: block;
+  }
   .header .navbar li::after {
     display: block;
   }

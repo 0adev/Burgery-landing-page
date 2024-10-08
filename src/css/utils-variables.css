@@ -183,6 +183,9 @@
 .text-neutral-600 {
   color: var(--cl-neutral-600);
 }
+.text-neutral-300 {
+  color: var(--cl-neutral-100);
+}
 .text-danger {
   color: var(--cl-danger);
 }
@@ -532,6 +535,9 @@ d.block {
   align-items: flex-end;
 }
 
+.place-items-start {
+  place-items: start;
+}
 .place-items-center {
   place-items: center;
 }

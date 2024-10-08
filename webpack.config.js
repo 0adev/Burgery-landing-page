@@ -100,6 +100,7 @@ module.exports = {
     ...[
       "about",
       "contact",
+      "cart",
       "menu",
       "blog",
       "blog1",
