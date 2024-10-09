@@ -188,7 +188,7 @@
 }
 
 /* media queries */
-@media (max-width: 1344px) {
+@media (max-width: 84rem) {
   .about-hero-section > .container > *:first-child {
     place-self: end center;
   }
@@ -211,7 +211,7 @@
   }
 }
 
-@media (max-width: 940px) {
+@media (max-width: 58.75rem) {
   .about-hero-section {
     background-size: 200%;
   }
@@ -242,13 +242,13 @@
   }
 }
 
-@media (max-width: 810px) {
+@media (max-width: 50.625rem) {
   /* features */
   .about-us .features-section .sub-heading {
     text-wrap: wrap;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 31.25rem) {
   .about-hero-section .heading {
     font-size: var(--fs-6xl);
   }

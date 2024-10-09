@@ -184,7 +184,7 @@
 }
 
 /* media queries */
-@media (max-width: 1344px) {
+@media (max-width: 84rem) {
   .contact-hero-section > .container > *:first-child {
     place-self: end center;
   }
@@ -199,7 +199,7 @@
   }
 }
 
-@media (max-width: 1060px) {
+@media (max-width: 66.25rem) {
   .contact-section .faqs .question {
     width: calc(100% - 4rem);
   }
@@ -212,7 +212,7 @@
   }
 }
 
-@media (max-width: 940px) {
+@media (max-width: 58.75rem) {
   .contact-hero-section {
     background-size: 200%;
   }
@@ -232,7 +232,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 31.25rem) {
   .contact-hero-section .heading {
     font-size: var(--fs-6xl);
   }

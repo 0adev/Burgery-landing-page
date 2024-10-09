@@ -90,7 +90,7 @@
 }
 
 /* media queries */
-@media (max-width: 970px) {
+@media (max-width: 60.625rem) {
   .blog-item .blog-content {
     display: grid;
     grid-template-columns: initial;
@@ -101,7 +101,7 @@
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 35rem) {
   .blog-item .article .section-heading {
     text-align: left;
     place-items: start;

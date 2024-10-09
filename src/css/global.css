@@ -297,7 +297,7 @@ footer {
 }
 
 /* media queries */
-@media (max-width: 810px) {
+@media (max-width: 50.625rem) {
   /* header */
   .header .shopping-cart {
     display: none;
@@ -356,7 +356,7 @@ footer {
     place-self: start;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 45rem) {
   /* header */
   .header .nav-menu {
     background-position: 200px;
@@ -368,7 +368,7 @@ footer {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 34.375rem) {
   /* header */
   .header .nav-menu {
     background-position: 115px;

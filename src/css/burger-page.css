@@ -134,7 +134,7 @@
 }
 
 /* media queries */
-@media (max-width: 1150px) {
+@media (max-width: 71.875rem) {
   .product-page .wrapper > .container {
     grid-auto-flow: row;
     grid-template-columns: none;
@@ -155,7 +155,7 @@
   }
 }
 
-@media (max-width: 788px) {
+@media (max-width: 49.25rem) {
   .product-page .burger-image {
     flex-wrap: wrap;
   }
@@ -166,7 +166,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
   .product-page .wrapper {
     gap: var(--gap-md);
     margin-block: var(--spacing-md);

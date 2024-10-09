@@ -53,13 +53,13 @@
 }
 
 /* media queries */
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
   .menu .card {
     width: 20rem;
     text-align: center;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 31.25rem) {
   .menu .card {
     width: initial;
   }
